@@ -1,26 +1,116 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/effect-fade";
+@import "aos/dist/aos.css";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #006A90;
+  --color-primary-dark: #005573;
+  --color-secondary: #F3F3F3;
+  --color-dark: #181523;
+  --color-text: #080708;
+  --color-text-light: #4c505b;
+  --font-sans: var(--font-poppins);
+  --font-serif: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  color: #080708;
+  background: #fff;
+  overflow-x: hidden;
 }
+
+/* ===== KEN BURNS ===== */
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.12); }
+}
+.ken-burns { animation: kenBurns 8s ease-out forwards; }
+.swiper-slide-active .ken-burns { animation: kenBurns 8s ease-out forwards; }
+
+/* ===== HERO TEXT ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes widthGrow {
+  from { width: 0; opacity: 0; }
+  to { width: 80px; opacity: 1; }
+}
+
+.swiper-slide-active .hero-title { animation: fadeDown 1s 0.2s ease both; }
+.swiper-slide-active .hero-sub { animation: fadeUp 1s 0.5s ease both; }
+.swiper-slide-active .hero-line { animation: widthGrow 0.6s 0.8s ease both; }
+.swiper-slide-active .hero-btn { animation: fadeUp 0.8s 1s ease both; }
+.hero-title, .hero-sub, .hero-line, .hero-btn { opacity: 0; }
+
+/* ===== SWIPER ARROWS ===== */
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+  color: #fff;
+  width: 48px; height: 48px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+.hero-swiper .swiper-button-next:hover,
+.hero-swiper .swiper-button-prev:hover { background: rgba(0,106,144,0.75); }
+.hero-swiper .swiper-button-next::after,
+.hero-swiper .swiper-button-prev::after { font-size: 15px; font-weight: 700; }
+.hero-swiper .swiper-button-next { right: 24px; }
+.hero-swiper .swiper-button-prev { left: 24px; }
+.hero-swiper .swiper-pagination { bottom: 28px !important; }
+.hero-swiper .swiper-pagination-bullet {
+  background: rgba(255,255,255,0.5); opacity: 1;
+  width: 10px; height: 10px; margin: 0 4px !important;
+  transition: all 0.3s;
+}
+.hero-swiper .swiper-pagination-bullet-active {
+  background: #006A90; width: 28px; border-radius: 5px;
+}
+@media (max-width: 640px) {
+  .hero-swiper .swiper-button-next,
+  .hero-swiper .swiper-button-prev { display: none; }
+}
+
+/* ===== TESTIMONIAL SWIPER ===== */
+.testimonial-swiper .swiper-pagination-bullet { background: #ccc; opacity: 1; }
+.testimonial-swiper .swiper-pagination-bullet-active { background: #006A90; }
+
+/* ===== NAVBAR ===== */
+.navbar-scrolled {
+  background: rgba(255,255,255,0.97) !important;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+  backdrop-filter: blur(12px);
+}
+.nav-link { position: relative; }
+.nav-link::after {
+  content: ''; position: absolute; bottom: -3px; left: 50%; transform: translateX(-50%);
+  width: 0; height: 2px; background: #006A90; transition: width 0.3s;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* ===== PORTFOLIO HOVER ===== */
+.portfolio-item:hover .portfolio-img { transform: scale(1.08); }
+.portfolio-item:hover .portfolio-over { opacity: 1; }
+
+/* ===== WHATSAPP ===== */
+@keyframes wpGlow {
+  0%, 100% { box-shadow: 0 0 8px rgba(37,211,102,0.5); }
+  50% { box-shadow: 0 0 20px rgba(37,211,102,0.7), 0 0 40px rgba(37,211,102,0.3); }
+}
+.whatsapp-glow { animation: wpGlow 2s infinite; }
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f5f5f5; }
+::-webkit-scrollbar-thumb { background: #006A90; border-radius: 3px; }
