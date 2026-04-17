@@ -9,6 +9,9 @@ const allProjects = [
   { title: "Pak Vitae", year: "2023", category: "Interior & Renovation", image: "/images/projects/commercial/pak_vitae_2023_interior.jpg" },
   { title: "UBL IT & IS", year: "2024", category: "Interior & Renovation", image: "/images/projects/commercial/ubl_it_&_is_2024_interior.jpg" },
   { title: "UBL Cafeteria", year: "2025", category: "Interior & Renovation", image: "/images/projects/commercial/ubl_cafeteria_2025_interior.jpg" },
+  { title: "UBL Day Care", year: "2024", category: "Interior & Renovation", image: "/images/projects/commercial/ubl_day_care_2024_renovate.jpg" },
+  { title: "UBL Fund Managers — HR", year: "2022", category: "Interior & Renovation", image: "/images/projects/commercial/ubl_fund_managers_-_hr_department_2022_interior.jpg" },
+  { title: "UBL", year: "2020", category: "Interior & Renovation", image: "/images/projects/commercial/ubl.jpg" },
   { title: "Swiss Ligna Gloss", year: "2024", category: "Interior & Renovation", image: "/images/projects/commercial/swiss_ligna_gloss_2024_interior.jpg" },
   { title: "AHM Securities", year: "2023", category: "Interior & Renovation", image: "/images/projects/commercial/ahm_2023_interior.jpg" },
   { title: "PROLOG Express", year: "2024", category: "Interior & Renovation", image: "/images/projects/commercial/prolog_2024_interior.jpg" },
@@ -17,6 +20,9 @@ const allProjects = [
   { title: "Ehad Pharmacy", year: "2022", category: "Interior & Renovation", image: "/images/projects/commercial/ehad_pharmacy_2022_interior.jpg" },
   { title: "Malak", year: "2022", category: "Interior & Renovation", image: "/images/projects/commercial/malak_2022_interior.jpg" },
   { title: "Tapal", year: "2022", category: "Interior & Renovation", image: "/images/projects/commercial/tapal_2022_interior.jpg" },
+  { title: "Pharmacie Plus", year: "2019", category: "Interior & Renovation", image: "/images/projects/commercial/phermacie_plus_2019_i,r.jpg" },
+  { title: "Cotton & Silk", year: "2017", category: "Interior & Renovation", image: "/images/projects/commercial/cotten_and_silk_2017_i,r.jpg" },
+  { title: "Med Life (Dr. Nadir Shah)", year: "2013", category: "Interior & Renovation", image: "/images/projects/commercial/med_life_dr_nadir_shah_2013_i,r.jpg" },
   { title: "MCB (Arif Habib)", year: "2020", category: "Interior & Renovation", image: "/images/projects/commercial/mcb_(arif_habib_saving)_2020_i,r.jpg" },
   { title: "Schlumberger", year: "2013", category: "Interior & Renovation", image: "/images/projects/commercial/schlumbergur_2013_i,r.jpg" },
   { title: "Edenrobe Beauty", year: "2024", category: "Kiosk", image: "/images/projects/kiosk/edenrobe_beauty_2024_kiosk.jpg" },
@@ -37,12 +43,31 @@ const allProjects = [
   { title: "Soneri Bank", year: "2018", category: "Furniture", image: "/images/projects/furniture/sonari_bank_2018_f.jpg" },
 ];
 
+const folders = ["Interior & Renovation", "Kiosk", "Turnkey", "Furniture"];
+
+function ProjectCard({ p, i }: { p: (typeof allProjects)[number]; i: number }) {
+  return (
+    <div
+      className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square"
+      data-aos="fade-up"
+      data-aos-delay={Math.min(i * 30, 200)}
+    >
+      <img
+        src={p.image}
+        alt={p.title}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 p-3">
+        <p className="text-white text-xs font-semibold">{p.title}</p>
+        <p className="text-white/75 text-[10px] tracking-wide">{p.year}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function PortfolioPage() {
   const [active, setActive] = useState("All Projects");
-
-  const filtered = active === "All Projects"
-    ? allProjects
-    : allProjects.filter((p) => p.category === active);
 
   return (
     <section className="pt-32 sm:pt-36 pb-16 sm:pb-20 bg-white min-h-screen">
@@ -59,7 +84,7 @@ export default function PortfolioPage() {
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -75,19 +100,42 @@ export default function PortfolioPage() {
           ))}
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-          {filtered.map((p, i) => (
-            <div key={`${p.title}-${i}`} className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square" data-aos="fade-up" data-aos-delay={Math.min(i * 30, 200)}>
-              <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/80 to-transparent pt-8">
-                <p className="text-white text-xs font-medium">{p.title}</p>
-                <p className="text-white/60 text-[10px]">{p.category} &middot; {p.year}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        {active === "All Projects" ? (
+          <div className="space-y-14">
+            {folders.map((folder) => {
+              const items = allProjects.filter((p) => p.category === folder);
+              if (items.length === 0) return null;
+              return (
+                <div key={folder}>
+                  <div className="flex items-baseline justify-between mb-5 border-b border-gray-200 pb-2">
+                    <h2
+                      className="text-xl sm:text-2xl font-bold text-[#080708]"
+                      style={{ fontFamily: "var(--font-playfair), serif" }}
+                    >
+                      {folder}
+                    </h2>
+                    <span className="text-[11px] text-[#4c505b] tracking-wider uppercase">
+                      {items.length} projects
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                    {items.map((p, i) => (
+                      <ProjectCard key={`${p.title}-${i}`} p={p} i={i} />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {allProjects
+              .filter((p) => p.category === active)
+              .map((p, i) => (
+                <ProjectCard key={`${p.title}-${i}`} p={p} i={i} />
+              ))}
+          </div>
+        )}
       </div>
     </section>
   );

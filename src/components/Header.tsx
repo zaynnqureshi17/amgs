@@ -18,7 +18,6 @@ const navLinks = [
   { name: "Our Story", href: "/our-story" },
   { name: "About Us", href: "/about" },
   { name: "Faqs", href: "/faqs" },
-  { name: "Vlogs", href: "/videos" },
 ];
 
 export default function Header({ transparent = false }: { transparent?: boolean }) {
@@ -43,18 +42,18 @@ export default function Header({ transparent = false }: { transparent?: boolean 
       {/* Top Bar - only on transparent (homepage), hides on scroll */}
       {transparent && (
       <div
-        className={`bg-[#006A90] text-white hidden lg:block fixed left-0 right-0 z-[60] transition-transform duration-300 ${
+        className={`bg-[#C8102E] text-white hidden lg:block fixed left-0 right-0 z-[60] transition-transform duration-300 ${
           scrolled ? "-translate-y-full" : "translate-y-0"
         }`}
         style={{ top: 0 }}
       >
         <div className="max-w-7xl mx-auto px-6 xl:px-10 py-1.5 flex justify-between items-center text-[12px]">
           <div className="flex items-center gap-5">
-            <a href="mailto:info@amgys.com" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
-              <FaEnvelope className="text-[10px]" /> info@amgys.com
+            <a href="mailto:Info@amgys.com" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+              <FaEnvelope className="text-[10px]" /> Info@amgys.com
             </a>
-            <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
-              <FaWhatsapp /> +92 300 1234567
+            <a href="https://wa.me/923101191787" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+              <FaWhatsapp /> 0310-1191787
             </a>
           </div>
           <div className="flex items-center gap-3.5">

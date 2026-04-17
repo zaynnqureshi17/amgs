@@ -3,8 +3,8 @@
 const timeline = [
   {
     date: "1979",
-    title: "AMGYS Founded",
-    desc: "Founded by Sohail Y. Minhas as a wood working and interior contracting firm in Karachi.",
+    title: "1st Generation — Muhammad Yusuf Minhas (Late)",
+    desc: "AMGYS founded by Muhammad Yusuf Minhas as a wood working and interior contracting firm in Karachi.",
     side: "left",
   },
   {
@@ -14,39 +14,39 @@ const timeline = [
     side: "right",
   },
   {
-    date: "1990s",
-    title: "Corporate Expansion",
-    desc: "Expanded into corporate office interiors and turnkey projects for multinational companies.",
+    date: "1990",
+    title: "2nd Generation — Sohail Yusuf Minhas",
+    desc: "Sohail Yusuf Minhas took the helm, expanding into corporate office interiors and turnkey projects for multinational companies.",
     side: "left",
-  },
-  {
-    date: "2000s",
-    title: "2nd Generation Joins",
-    desc: "The second generation of the Minhas family joined operations, bringing fresh ideas and modern techniques.",
-    side: "right",
   },
   {
     date: "2010s",
     title: "Retail & Kiosk Division",
     desc: "Launched specialized retail outlet and kiosk design division. Completed projects for Titan, Ten Sport, Tradekey and more.",
+    side: "right",
+  },
+  {
+    date: "2011",
+    title: "3rd Generation — Zaigham Minhas & Danish Minhas (Late)",
+    desc: "The third generation joined the business, bringing fresh ideas and modern techniques to the firm.",
     side: "left",
   },
   {
     date: "2020",
-    title: "3rd Generation & 150K+ Sq Ft",
-    desc: "3rd generation takes the helm. Crossed 150,000 sq feet of projects delivered. Secured iVolve Technologies turnkey project.",
+    title: "500K+ Sq Ft Milestone",
+    desc: "Crossed 500,000 sq feet of projects delivered. Secured iVolve Technologies turnkey project.",
     side: "right",
   },
   {
     date: "2022-2024",
     title: "Major Projects Era",
-    desc: "Completed UBL IT & IS (96 images worth of work), OPTICO flagship, Pak Vitae, Swiss Ligna Gloss, PROLOG, and many more landmark projects.",
+    desc: "Completed UBL IT & IS, OPTICO flagship, Pak Vitae, Swiss Ligna Gloss, PROLOG, and many more landmark projects.",
     side: "left",
   },
   {
     date: "2025",
     title: "50+ Years & Counting",
-    desc: "AMGYS celebrates over 5 decades of excellence with 60+ completed projects, 100+ satisfied clients, and operations in 4 cities across Pakistan.",
+    desc: "AMGYS celebrates over 5 decades of excellence with 400+ completed projects, 400+ satisfied clients, and nationwide operations across Pakistan.",
     side: "right",
   },
 ];

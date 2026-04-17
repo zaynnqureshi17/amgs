@@ -4,10 +4,10 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 const stats = [
-  { number: 350, suffix: "+", label: "Projects Completed" },
-  { number: 15, suffix: "+", label: "Years Experience" },
-  { number: 200, suffix: "+", label: "Happy Clients" },
-  { number: 50, suffix: "+", label: "Team Members" },
+  { number: 400, suffix: "+", label: "Projects Completed" },
+  { number: 50, suffix: "+", label: "Years Experience" },
+  { number: 400, suffix: "+", label: "Happy Clients" },
+  { number: 500, suffix: "K", label: "Sq. Ft Delivered" },
 ];
 
 export default function Stats() {

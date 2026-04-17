@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
 
-const navLinks = ["Home", "Portfolio", "Our Story", "About", "Faqs", "Vlogs"];
-const navHrefs = ["/", "/projects", "/our-story", "/about", "/faqs", "/videos"];
+const navLinks = ["Home", "Portfolio", "Our Story", "About", "Faqs"];
+const navHrefs = ["/", "/projects", "/our-story", "/about", "/faqs"];
 
 const projects = [
   "OPTICO 2023", "Pak Vitae 2023", "UBL IT & IS 2024", "Swiss Ligna Gloss 2024",

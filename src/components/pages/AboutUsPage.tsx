@@ -9,10 +9,10 @@ const management = [
 
 const supervisory = [
   { dept: "Carpentry", staff: "Muhammad Sharif (40 yrs), Rana Amir (22 yrs), Dilshad Mirza (20 yrs)" },
-  { dept: "Polish & Paint", staff: "Zaheer Hussain (40 yrs), Jan Muhammad (20 yrs)" },
+  { dept: "Polish & Paint", staff: "Zaheer Hussain (40 yrs), Jan Muhammad (20 yrs), Rao Saeed" },
   { dept: "Cushion & Upholstery", staff: "Muhammad Ramzan (20 yrs), Muhammad Fayyaz (25 yrs), Abdul Rahman (35 yrs)" },
   { dept: "Electrical", staff: "Muhammad Iqbal (18 yrs), Rehan Baig (10 yrs)" },
-  { dept: "Plumbing", staff: "Rana Liaquat (35 yrs)" },
+  { dept: "Plumbing", staff: "Rana Liaquat (35 yrs), Fazal Mahmood" },
   { dept: "Civil", staff: "Muhammad Ilyas (25 yrs), Muhammad Mustafa (10 yrs)" },
 ];
 
@@ -51,8 +51,8 @@ export default function AboutUsPage() {
           <div className="lg:col-span-2 bg-[#006A90] p-8 sm:p-10 flex flex-col justify-center gap-8">
             {[
               { val: "1979", label: "Established" },
-              { val: "100+", label: "Clients Served" },
-              { val: "150K+", label: "Sq. Feet Delivered" },
+              { val: "400+", label: "Clients Served" },
+              { val: "500K+", label: "Sq. Feet Delivered" },
             ].map((s) => (
               <div key={s.label}>
                 <span className="text-3xl sm:text-4xl font-bold text-white block" style={{ fontFamily: "var(--font-playfair), serif" }}>{s.val}</span>
