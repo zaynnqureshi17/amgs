@@ -79,7 +79,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             <img
               src="/images/amgys-logo.jpeg"
               alt="AMGYS Interiors"
-              className="h-10 sm:h-12 w-auto rounded-md object-contain"
+              className="h-16 sm:h-20 w-auto rounded-md object-contain"
             />
           </Link>
 
