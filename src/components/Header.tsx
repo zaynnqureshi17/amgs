@@ -50,10 +50,10 @@ export default function Header({ transparent = false }: { transparent?: boolean 
         <div className="max-w-7xl mx-auto px-6 xl:px-10 py-1.5 flex justify-between items-center text-[12px]">
           <div className="flex items-center gap-5">
             <a href="mailto:Info@amgys.com" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
-              <FaEnvelope className="text-[10px]" /> Info@amgys.com
+              <FaEnvelope className="text-[12px] flex-shrink-0" /> Info@amgys.com
             </a>
             <a href="https://wa.me/923101191787" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
-              <FaWhatsapp /> 0310-1191787
+              <FaWhatsapp className="text-[12px] flex-shrink-0" /> 0310-1191787
             </a>
           </div>
           <div className="flex items-center gap-3.5">
