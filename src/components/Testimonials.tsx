@@ -47,7 +47,7 @@ export default function Testimonials() {
           </div>
 
           <div data-aos="fade-left">
-            <span className="text-[#006A90] text-[11px] sm:text-xs font-semibold tracking-[3px] uppercase">
+            <span className="text-[#E84520] text-[11px] sm:text-xs font-semibold tracking-[3px] uppercase">
               Testimonials
             </span>
             <h2
@@ -68,7 +68,7 @@ export default function Testimonials() {
               {testimonials.map((t, i) => (
                 <SwiperSlide key={i}>
                   <div>
-                    <FaQuoteLeft className="text-[#006A90]/20 text-2xl sm:text-3xl mb-4" />
+                    <FaQuoteLeft className="text-[#E84520]/20 text-2xl sm:text-3xl mb-4" />
                     <p className="text-[#4c505b] text-sm sm:text-[15px] leading-[1.8] mb-5">
                       &ldquo;{t.text}&rdquo;
                     </p>
@@ -78,12 +78,12 @@ export default function Testimonials() {
                       ))}
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-full bg-[#006A90] flex items-center justify-center text-white font-bold text-xs">
+                      <div className="w-9 h-9 rounded-full bg-[#E84520] flex items-center justify-center text-white font-bold text-xs">
                         {t.name.charAt(0)}
                       </div>
                       <div>
                         <p className="font-semibold text-[#080708] text-sm" style={{ fontFamily: "var(--font-playfair), serif" }}>{t.name}</p>
-                        <p className="text-[#006A90] text-xs">{t.role}</p>
+                        <p className="text-[#E84520] text-xs">{t.role}</p>
                       </div>
                     </div>
                   </div>

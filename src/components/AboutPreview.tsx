@@ -7,7 +7,7 @@ export default function AboutPreview() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text */}
           <div data-aos="fade-right">
-            <span className="text-[#006A90] text-[11px] sm:text-xs font-semibold tracking-[3px] uppercase">
+            <span className="text-[#E84520] text-[11px] sm:text-xs font-semibold tracking-[3px] uppercase">
               About AMGYS
             </span>
             <h2
@@ -16,7 +16,7 @@ export default function AboutPreview() {
             >
               5 Decades of Interior<br />Excellence
             </h2>
-            <div className="w-12 h-[2px] bg-[#006A90] mb-5" />
+            <div className="w-12 h-[2px] bg-[#E84520] mb-5" />
             <p className="text-[#4c505b] text-sm leading-[1.8] mb-4">
               AMGYS Interiors have successfully managed 5 decades (50+ years) of
               existence in the field of wood working and interior contracting. The company
@@ -35,7 +35,7 @@ export default function AboutPreview() {
               ].map((item) => (
                 <div key={item.label} className="text-center">
                   <span
-                    className="text-2xl font-bold text-[#006A90] block"
+                    className="text-2xl font-bold text-[#E84520] block"
                     style={{ fontFamily: "var(--font-playfair), serif" }}
                   >
                     {item.val}
@@ -48,7 +48,7 @@ export default function AboutPreview() {
             </div>
             <a
               href="/about"
-              className="inline-block bg-[#006A90] text-white px-8 py-3 rounded-full text-xs font-semibold tracking-[2px] uppercase hover:bg-[#005573] transition-colors"
+              className="inline-block bg-[#E84520] text-white px-8 py-3 rounded-full text-xs font-semibold tracking-[2px] uppercase hover:bg-[#C83A15] transition-colors"
             >
               More About Us
             </a>

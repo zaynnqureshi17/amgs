@@ -17,7 +17,7 @@ export default function Portfolio() {
   return (
     <section className="py-16 sm:py-20 md:py-28 bg-[#181523]">
       <div className="text-center mb-12 px-6" data-aos="fade-up">
-        <span className="text-[#006A90] text-[11px] sm:text-xs font-semibold tracking-[3px] uppercase">
+        <span className="text-[#E84520] text-[11px] sm:text-xs font-semibold tracking-[3px] uppercase">
           Portfolio
         </span>
         <h2
@@ -26,7 +26,7 @@ export default function Portfolio() {
         >
           Our Recent Projects
         </h2>
-        <div className="w-14 h-[2px] bg-[#006A90] mx-auto mt-4" />
+        <div className="w-14 h-[2px] bg-[#E84520] mx-auto mt-4" />
       </div>
 
       <div className="max-w-7xl mx-auto px-3 sm:px-6">
@@ -35,13 +35,13 @@ export default function Portfolio() {
             <div key={i} className="portfolio-item relative group cursor-pointer overflow-hidden h-[200px] sm:h-[260px] lg:h-[300px]">
               <img src={p.image} alt={p.title} className="portfolio-img absolute inset-0 w-full h-full object-cover transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="portfolio-over absolute inset-0 bg-[#006A90]/75 opacity-0 transition-opacity duration-400 flex items-center justify-center">
+              <div className="portfolio-over absolute inset-0 bg-[#E84520]/75 opacity-0 transition-opacity duration-400 flex items-center justify-center">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white flex items-center justify-center">
                   <FaArrowRight className="text-white text-xs sm:text-sm" />
                 </div>
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 z-10">
-                <span className="text-[#006A90] text-[9px] sm:text-[10px] font-semibold tracking-[2px] uppercase group-hover:text-white/70 transition-colors">{p.category}</span>
+                <span className="text-[#E84520] text-[9px] sm:text-[10px] font-semibold tracking-[2px] uppercase group-hover:text-white/70 transition-colors">{p.category}</span>
                 <h3 className="text-white text-sm sm:text-base lg:text-lg font-bold mt-1" style={{ fontFamily: "var(--font-playfair), serif" }}>{p.title}</h3>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function Portfolio() {
       </div>
 
       <div className="text-center mt-10 sm:mt-12">
-        <a href="/projects" className="inline-block border-2 border-[#006A90] text-[#006A90] px-8 py-3 rounded-full text-xs font-semibold tracking-[2px] hover:bg-[#006A90] hover:text-white transition-all duration-300 uppercase">
+        <a href="/projects" className="inline-block border-2 border-[#E84520] text-[#E84520] px-8 py-3 rounded-full text-xs font-semibold tracking-[2px] hover:bg-[#E84520] hover:text-white transition-all duration-300 uppercase">
           View All Projects
         </a>
       </div>

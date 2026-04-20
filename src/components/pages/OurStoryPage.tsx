@@ -75,7 +75,7 @@ export default function OurStoryPage() {
             {timeline.map((item, i) => (
               <div key={i} className="relative pl-10 sm:pl-0" data-aos="fade-up">
                 {/* Dot */}
-                <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#006A90] border-2 border-white shadow z-10 top-1" />
+                <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#E84520] border-2 border-white shadow z-10 top-1" />
 
                 <div className={`sm:grid sm:grid-cols-2 sm:gap-10`}>
                   {/* Left */}
@@ -83,7 +83,7 @@ export default function OurStoryPage() {
                     {item.side === "left" ? (
                       <div>
                         <span
-                          className="text-xl sm:text-2xl font-bold text-[#006A90] block mb-1"
+                          className="text-xl sm:text-2xl font-bold text-[#E84520] block mb-1"
                           style={{ fontFamily: "var(--font-playfair), serif" }}
                         >
                           {item.date}
@@ -99,7 +99,7 @@ export default function OurStoryPage() {
                     ) : (
                       <div className="hidden sm:flex sm:justify-end sm:items-start sm:pt-1">
                         <span
-                          className="text-xl sm:text-2xl font-bold text-[#006A90]"
+                          className="text-xl sm:text-2xl font-bold text-[#E84520]"
                           style={{ fontFamily: "var(--font-playfair), serif" }}
                         >
                           {item.date}
@@ -113,7 +113,7 @@ export default function OurStoryPage() {
                     {item.side === "right" ? (
                       <div>
                         <span
-                          className="text-xl sm:text-2xl font-bold text-[#006A90] block mb-1 sm:hidden"
+                          className="text-xl sm:text-2xl font-bold text-[#E84520] block mb-1 sm:hidden"
                           style={{ fontFamily: "var(--font-playfair), serif" }}
                         >
                           {item.date}
@@ -129,7 +129,7 @@ export default function OurStoryPage() {
                     ) : (
                       <div className="hidden sm:block sm:pt-1">
                         <span
-                          className="text-xl sm:text-2xl font-bold text-[#006A90]"
+                          className="text-xl sm:text-2xl font-bold text-[#E84520]"
                           style={{ fontFamily: "var(--font-playfair), serif" }}
                         >
                           {item.date}

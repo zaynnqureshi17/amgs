@@ -32,7 +32,7 @@ export default function ClientLogos() {
     <section className="py-14 sm:py-18 md:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6 sm:px-10">
         <div className="text-center mb-10" data-aos="fade-up">
-          <span className="text-[#006A90] text-[11px] sm:text-xs font-semibold tracking-[3px] uppercase">
+          <span className="text-[#E84520] text-[11px] sm:text-xs font-semibold tracking-[3px] uppercase">
             Trusted By
           </span>
           <h2
@@ -41,7 +41,7 @@ export default function ClientLogos() {
           >
             Our Clients
           </h2>
-          <div className="w-14 h-[2px] bg-[#006A90] mx-auto mt-4" />
+          <div className="w-14 h-[2px] bg-[#E84520] mx-auto mt-4" />
         </div>
 
         <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4 sm:gap-6 items-center">

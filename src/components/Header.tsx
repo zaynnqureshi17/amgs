@@ -42,7 +42,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
       {/* Top Bar - only on transparent (homepage), hides on scroll */}
       {transparent && (
       <div
-        className={`bg-[#C8102E] text-white hidden lg:block fixed left-0 right-0 z-[60] transition-transform duration-300 ${
+        className={`bg-[#E84520] text-white hidden lg:block fixed left-0 right-0 z-[60] transition-transform duration-300 ${
           scrolled ? "-translate-y-full" : "translate-y-0"
         }`}
         style={{ top: 0 }}
@@ -76,21 +76,11 @@ export default function Header({ transparent = false }: { transparent?: boolean 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-10 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <span
-              className={`block text-[20px] sm:text-[22px] font-bold tracking-[3px] transition-colors duration-300 ${
-                isDark ? "text-[#006A90]" : "text-white"
-              }`}
-              style={{ fontFamily: "var(--font-playfair), serif" }}
-            >
-              AMGYS
-            </span>
-            <span
-              className={`block text-[7px] font-medium tracking-[3px] uppercase transition-colors duration-300 ${
-                isDark ? "text-[#4c505b]" : "text-white/50"
-              }`}
-            >
-              Interiors
-            </span>
+            <img
+              src="/images/amgys-logo.jpeg"
+              alt="AMGYS Interiors"
+              className="h-10 sm:h-12 w-auto rounded-md object-contain"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -102,7 +92,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                   href={link.href}
                   className={`nav-link text-[11px] xl:text-[12px] font-medium tracking-[1.5px] uppercase transition-colors duration-300 ${
                     isDark
-                      ? "text-[#080708] hover:text-[#006A90]"
+                      ? "text-[#080708] hover:text-[#E84520]"
                       : "text-white/85 hover:text-white"
                   }`}
                 >
@@ -113,7 +103,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             <div className="flex items-center gap-2 ml-6">
               <Link
                 href="/contact"
-                className="bg-[#006A90] text-white px-4 xl:px-5 py-1.5 rounded text-[10px] xl:text-[11px] font-semibold tracking-[0.5px] hover:bg-[#005573] transition-colors whitespace-nowrap"
+                className="bg-[#E84520] text-white px-4 xl:px-5 py-1.5 rounded text-[10px] xl:text-[11px] font-semibold tracking-[0.5px] hover:bg-[#C83A15] transition-colors whitespace-nowrap"
               >
                 GET FREE ESTIMATE
               </Link>
@@ -130,7 +120,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
           <button
             onClick={() => setOpen(!open)}
             className={`lg:hidden text-xl z-[60] transition-colors ${
-              open || isDark ? "text-[#006A90]" : "text-white"
+              open || isDark ? "text-[#E84520]" : "text-white"
             }`}
             aria-label="Menu"
           >
@@ -152,7 +142,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
                 key={link.name}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-xl sm:text-2xl font-semibold text-[#080708] hover:text-[#006A90] transition-colors py-3 border-b border-gray-100"
+                className="text-xl sm:text-2xl font-semibold text-[#080708] hover:text-[#E84520] transition-colors py-3 border-b border-gray-100"
                 style={{ fontFamily: "var(--font-playfair), serif" }}
               >
                 {link.name}
@@ -163,7 +153,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="flex-1 bg-[#006A90] text-white py-3 rounded text-center text-sm font-semibold tracking-wider hover:bg-[#005573] transition-colors"
+              className="flex-1 bg-[#E84520] text-white py-3 rounded text-center text-sm font-semibold tracking-wider hover:bg-[#C83A15] transition-colors"
             >
               GET FREE ESTIMATE
             </Link>

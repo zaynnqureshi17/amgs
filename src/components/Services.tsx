@@ -34,7 +34,7 @@ export default function Services() {
     <section className="py-16 sm:py-20 md:py-28 bg-[#f7f7f7]">
       <div className="max-w-6xl mx-auto px-6 sm:px-10">
         <div className="text-center mb-12" data-aos="fade-up">
-          <span className="text-[#006A90] text-[11px] sm:text-xs font-semibold tracking-[3px] uppercase">
+          <span className="text-[#E84520] text-[11px] sm:text-xs font-semibold tracking-[3px] uppercase">
             What We Offer
           </span>
           <h2
@@ -43,7 +43,7 @@ export default function Services() {
           >
             Our Services
           </h2>
-          <div className="w-14 h-[2px] bg-[#006A90] mx-auto mt-4" />
+          <div className="w-14 h-[2px] bg-[#E84520] mx-auto mt-4" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -65,7 +65,7 @@ export default function Services() {
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 bg-[#006A90] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-9 h-9 bg-[#E84520] rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon className="text-white text-sm" />
                     </div>
                     <h3
@@ -76,7 +76,7 @@ export default function Services() {
                     </h3>
                   </div>
                   <p className="text-[13px] text-[#4c505b] leading-[1.7]">{s.description}</p>
-                  <a href="/projects" className="inline-flex items-center text-[#006A90] font-semibold text-[13px] mt-4 gap-1.5 hover:gap-2.5 transition-all">
+                  <a href="/projects" className="inline-flex items-center text-[#E84520] font-semibold text-[13px] mt-4 gap-1.5 hover:gap-2.5 transition-all">
                     Learn More <span>&rarr;</span>
                   </a>
                 </div>

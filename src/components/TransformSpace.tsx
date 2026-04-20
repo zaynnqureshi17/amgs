@@ -54,7 +54,7 @@ function SliderHandle() {
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="sm:w-6 sm:h-6">
           <path
             d="M6 10L3 7M3 7L6 4M3 7H9M14 10L17 7M17 7L14 4M17 7H11"
-            stroke="#006A90"
+            stroke="#E84520"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -110,7 +110,7 @@ export default function TransformSpace() {
         </div>
 
         {/* Tagline */}
-        <p className="text-center text-[#006A90] text-[11px] sm:text-xs mb-6 sm:mb-8 max-w-md mx-auto">
+        <p className="text-center text-[#E84520] text-[11px] sm:text-xs mb-6 sm:mb-8 max-w-md mx-auto">
           {current.tagline}
         </p>
 
@@ -145,7 +145,7 @@ export default function TransformSpace() {
           </p>
           <a
             href="/contact"
-            className="inline-block bg-[#006A90] text-white px-7 sm:px-8 py-2.5 sm:py-3 rounded-full text-[11px] sm:text-xs font-semibold tracking-[2px] uppercase hover:bg-[#005573] transition-colors"
+            className="inline-block bg-[#E84520] text-white px-7 sm:px-8 py-2.5 sm:py-3 rounded-full text-[11px] sm:text-xs font-semibold tracking-[2px] uppercase hover:bg-[#C83A15] transition-colors"
           >
             Start Your Project
           </a>

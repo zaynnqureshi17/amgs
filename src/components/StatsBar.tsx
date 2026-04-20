@@ -20,7 +20,7 @@ export default function StatsBar() {
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
               <div
-                className="text-3xl sm:text-4xl md:text-[2.8rem] font-bold text-[#006A90] leading-none"
+                className="text-3xl sm:text-4xl md:text-[2.8rem] font-bold text-[#E84520] leading-none"
                 style={{ fontFamily: "var(--font-playfair), serif" }}
               >
                 {inView ? <CountUp end={stat.number} duration={2} /> : "0"}

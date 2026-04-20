@@ -61,7 +61,7 @@ export default function HeroSlider() {
                 <div className="hero-line h-[2px] bg-white/40 mt-6 sm:mt-8" style={{ width: 80 }} />
                 <a
                   href="/projects"
-                  className="hero-btn mt-8 sm:mt-10 bg-white text-[#080708] px-10 sm:px-14 py-3.5 sm:py-4 rounded-full text-[11px] sm:text-xs md:text-sm font-semibold tracking-[3px] uppercase hover:bg-[#006A90] hover:text-white transition-all duration-400 shadow-[0_4px_20px_rgba(0,0,0,0.15)]"
+                  className="hero-btn mt-8 sm:mt-10 bg-white text-[#080708] px-10 sm:px-14 py-3.5 sm:py-4 rounded-full text-[11px] sm:text-xs md:text-sm font-semibold tracking-[3px] uppercase hover:bg-[#E84520] hover:text-white transition-all duration-400 shadow-[0_4px_20px_rgba(0,0,0,0.15)]"
                 >
                   Explore Our Work
                 </a>

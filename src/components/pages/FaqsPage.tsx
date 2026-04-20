@@ -62,9 +62,9 @@ export default function FaqsPage() {
                   {faq.q}
                 </span>
                 {openIndex === i ? (
-                  <FaMinusCircle className="text-[#006A90] text-lg flex-shrink-0" />
+                  <FaMinusCircle className="text-[#E84520] text-lg flex-shrink-0" />
                 ) : (
-                  <FaPlusCircle className="text-[#006A90] text-lg flex-shrink-0" />
+                  <FaPlusCircle className="text-[#E84520] text-lg flex-shrink-0" />
                 )}
               </button>
               <div

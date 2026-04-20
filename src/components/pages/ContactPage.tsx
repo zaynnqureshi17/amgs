@@ -80,7 +80,7 @@ export default function ContactPage() {
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm text-[#080708] focus:outline-none focus:border-[#006A90] transition-colors"
+                  className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm text-[#080708] focus:outline-none focus:border-[#E84520] transition-colors"
                 />
               </div>
               <div>
@@ -93,7 +93,7 @@ export default function ContactPage() {
                   name="phone"
                   value={form.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm text-[#080708] focus:outline-none focus:border-[#006A90] transition-colors"
+                  className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm text-[#080708] focus:outline-none focus:border-[#E84520] transition-colors"
                 />
               </div>
             </div>
@@ -108,7 +108,7 @@ export default function ContactPage() {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm text-[#080708] focus:outline-none focus:border-[#006A90] transition-colors"
+                className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm text-[#080708] focus:outline-none focus:border-[#E84520] transition-colors"
               />
             </div>
 
@@ -121,7 +121,7 @@ export default function ContactPage() {
                   name="projectType"
                   value={form.projectType}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm text-[#080708] focus:outline-none focus:border-[#006A90] transition-colors"
+                  className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm text-[#080708] focus:outline-none focus:border-[#E84520] transition-colors"
                 >
                   <option value="">Select...</option>
                   <option value="Interior & Renovation">Interior & Renovation</option>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                   name="budget"
                   value={form.budget}
                   onChange={handleChange}
-                  className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm text-[#080708] focus:outline-none focus:border-[#006A90] transition-colors"
+                  className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm text-[#080708] focus:outline-none focus:border-[#E84520] transition-colors"
                 >
                   <option value="">Select...</option>
                   <option value="Under 1M">Under PKR 1M</option>
@@ -161,14 +161,14 @@ export default function ContactPage() {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Tell us about your space, requirements and timeline..."
-                className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm text-[#080708] focus:outline-none focus:border-[#006A90] transition-colors resize-none"
+                className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm text-[#080708] focus:outline-none focus:border-[#E84520] transition-colors resize-none"
               />
             </div>
 
             <button
               type="submit"
               disabled={status === "sending"}
-              className="w-full sm:w-auto bg-[#006A90] text-white px-8 py-3 rounded-full text-xs font-semibold tracking-[2px] uppercase hover:bg-[#005573] transition-colors disabled:opacity-60"
+              className="w-full sm:w-auto bg-[#E84520] text-white px-8 py-3 rounded-full text-xs font-semibold tracking-[2px] uppercase hover:bg-[#C83A15] transition-colors disabled:opacity-60"
             >
               {status === "sending" ? "Sending..." : status === "sent" ? "Thank you!" : "Submit Project"}
             </button>
@@ -176,7 +176,7 @@ export default function ContactPage() {
 
           {/* Info */}
           <div className="lg:col-span-2 space-y-5" data-aos="fade-left">
-            <div className="bg-[#006A90] text-white rounded-xl p-6 sm:p-7">
+            <div className="bg-[#E84520] text-white rounded-xl p-6 sm:p-7">
               <h3
                 className="text-xl font-bold mb-4"
                 style={{ fontFamily: "var(--font-playfair), serif" }}

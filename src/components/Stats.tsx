@@ -20,7 +20,7 @@ export default function Stats() {
           {stats.map((stat, i) => (
             <div key={i} className="text-center" data-aos="fade-up" data-aos-delay={i * 80}>
               <div
-                className="text-4xl sm:text-5xl md:text-[3.5rem] font-bold text-[#006A90] leading-none"
+                className="text-4xl sm:text-5xl md:text-[3.5rem] font-bold text-[#E84520] leading-none"
                 style={{ fontFamily: "var(--font-playfair), serif" }}
               >
                 {inView ? <CountUp end={stat.number} duration={2.5} /> : "0"}

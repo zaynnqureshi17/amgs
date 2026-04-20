@@ -33,7 +33,7 @@ export default function AboutUsPage() {
           </p>
           <a
             href="/contact"
-            className="inline-block bg-[#006A90] text-white px-7 py-2.5 rounded-full text-xs font-semibold tracking-[1px] mt-5 hover:bg-[#005573] transition-colors"
+            className="inline-block bg-[#E84520] text-white px-7 py-2.5 rounded-full text-xs font-semibold tracking-[1px] mt-5 hover:bg-[#C83A15] transition-colors"
           >
             Get Start
           </a>
@@ -48,7 +48,7 @@ export default function AboutUsPage() {
               className="w-full h-[250px] sm:h-[320px] lg:h-full object-cover"
             />
           </div>
-          <div className="lg:col-span-2 bg-[#006A90] p-8 sm:p-10 flex flex-col justify-center gap-8">
+          <div className="lg:col-span-2 bg-[#E84520] p-8 sm:p-10 flex flex-col justify-center gap-8">
             {[
               { val: "1979", label: "Established" },
               { val: "400+", label: "Clients Served" },
@@ -102,11 +102,11 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {management.map((m, i) => (
               <div key={i} className="bg-[#f7f7f7] rounded-xl p-5 text-center" data-aos="fade-up" data-aos-delay={i * 60}>
-                <div className="w-14 h-14 rounded-full bg-[#006A90] flex items-center justify-center text-white font-bold text-lg mx-auto mb-3" style={{ fontFamily: "var(--font-playfair), serif" }}>
+                <div className="w-14 h-14 rounded-full bg-[#E84520] flex items-center justify-center text-white font-bold text-lg mx-auto mb-3" style={{ fontFamily: "var(--font-playfair), serif" }}>
                   {m.name.charAt(0)}
                 </div>
                 <p className="font-semibold text-sm text-[#080708]" style={{ fontFamily: "var(--font-playfair), serif" }}>{m.name}</p>
-                <p className="text-[11px] text-[#006A90] font-medium mt-0.5">{m.role}</p>
+                <p className="text-[11px] text-[#E84520] font-medium mt-0.5">{m.role}</p>
                 {m.qual && <p className="text-[10px] text-[#4c505b] mt-1">{m.qual}</p>}
               </div>
             ))}
@@ -119,7 +119,7 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {supervisory.map((s, i) => (
               <div key={i} className="border border-gray-200 rounded-lg p-4" data-aos="fade-up" data-aos-delay={i * 50}>
-                <p className="font-semibold text-sm text-[#006A90] mb-1">{s.dept}</p>
+                <p className="font-semibold text-sm text-[#E84520] mb-1">{s.dept}</p>
                 <p className="text-[12px] text-[#4c505b] leading-relaxed">{s.staff}</p>
               </div>
             ))}
