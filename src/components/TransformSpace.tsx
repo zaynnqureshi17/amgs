@@ -16,33 +16,24 @@ const ReactCompareSliderImage = dynamic(
 const tabs = [
   {
     id: "office",
-    label: "Office",
-    tagline:
-      "Modern and practical designs that create productive and comfortable office environments.",
-    before:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=900&q=80",
-    after:
-      "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=900&q=80",
+    label: "CEO Office",
+    tagline: "A bare shell transformed into a premium executive office with warm wood panelling and custom furniture.",
+    before: "/images/before-after/before-1.jpeg",
+    after: "/images/before-after/after-1.jpeg",
   },
   {
-    id: "residential",
-    label: "Residential",
-    tagline:
-      "Cozy and stylish home designs that transform living spaces for families and individuals.",
-    before:
-      "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=900&q=80",
-    after:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=80",
+    id: "meeting",
+    label: "Meeting Room",
+    tagline: "Raw concrete walls converted into a modern branded meeting room for Al-Ameen Funds.",
+    before: "/images/before-after/before-2.jpeg",
+    after: "/images/before-after/after-2.jpeg",
   },
   {
-    id: "commercial",
-    label: "Commercial",
-    tagline:
-      "Impactful commercial spaces designed to elevate your brand and impress every client.",
-    before:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80",
-    after:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=80",
+    id: "reception",
+    label: "Reception",
+    tagline: "An empty space turned into a welcoming reception lounge with bold accent walls and designer seating.",
+    before: "/images/before-after/before-3.jpeg",
+    after: "/images/before-after/after-3.jpeg",
   },
 ];
 
