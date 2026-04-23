@@ -77,9 +77,9 @@ export default function Header({ transparent = false }: { transparent?: boolean 
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <img
-              src="/images/amgys-logo.jpeg"
+              src={isDark ? "/images/amgys-logo-dark.png" : "/images/amgys-logo-light.png"}
               alt="AMGYS Interiors"
-              className="h-16 sm:h-20 w-auto rounded-md object-contain"
+              className="h-14 sm:h-16 w-auto object-contain"
             />
           </Link>
 

@@ -66,7 +66,7 @@ export default function Footer() {
         <div className="max-w-5xl mx-auto px-6 sm:px-10 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[11px] text-gray-400">&copy; 2026 AMGYS Interiors. All Rights Reserved</p>
           <div className="flex-shrink-0">
-            <img src="/images/amgys-logo.jpeg" alt="AMGYS Interiors" className="h-9 w-auto rounded-md object-contain" />
+            <img src="/images/amgys-logo-dark.png" alt="AMGYS Interiors" className="h-10 w-auto object-contain" />
           </div>
           <div className="flex gap-4">
             <a href="#" className="text-[11px] text-gray-400 hover:text-[#E84520] transition-colors">Terms and Conditions</a>
