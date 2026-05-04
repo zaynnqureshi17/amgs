@@ -6,27 +6,39 @@ import { FaStar, FaQuoteLeft } from "react-icons/fa";
 
 const testimonials = [
   {
-    name: "Naveed Ahmed",
-    role: "UBL Fund Managers",
-    text: "AMGYS delivered an outstanding interior for our office. Their 50 years of experience truly shows in every detail. Professional, on-time, and within budget.",
+    name: "Mr. Danish Azar Zuby",
+    role: "Principal Architect, Daz Design Consultant",
+    text: "Amgys Interiors has the ability to undertake difficult and complex tasks, I would recommend them for any medium to medium-large Interior projects.",
     rating: 5,
   },
   {
-    name: "Dr. Nadir Shah",
-    role: "Med Life Clinic",
-    text: "From design consultation to final handover, AMGYS handled our clinic renovation with exceptional care. The quality of workmanship is second to none.",
+    name: "Mr. Zeeshan Saleem",
+    role: "Head Admin & HR, Suraj Cotton Mills",
+    text: "Amgys Interiors executed our 5000 Sq. feet Office space — a complete Turnkey Project. Their exposure in these areas was found satisfactory and they have the ability to handle difficult tasks in an efficient manner.",
     rating: 5,
   },
   {
-    name: "Farhan Malik",
-    role: "OPTICO Opticians",
-    text: "We trusted AMGYS with our flagship store interior and they exceeded every expectation. The retail space is now a showstopper that our customers love.",
+    name: "Mr. Shahid Abdullah",
+    role: "Founder & Principal Architect, Arshad, Shahid Abdulla (A.S.A.)",
+    text: "Amgys Interiors has worked on our projects where Interior Design, Additions and Alterations work was involved. We have found their work quite satisfactory and recommend them.",
     rating: 5,
   },
   {
-    name: "Tahir Minhas",
-    role: "iVolve Technologies",
-    text: "AMGYS executed our complete turnkey office project flawlessly. Their team managed everything from civil work to furniture — a truly one-stop solution.",
+    name: "Mr. Yawar Jilani",
+    role: "Principal Architect, ARCOP Associates Pakistan",
+    text: "We found Amgys Interiors to be quality conscious and efficient contractors particularly in the area of wood work.",
+    rating: 5,
+  },
+  {
+    name: "Mr. Navaid Hussain",
+    role: "Architect, Group1",
+    text: "This is to certify that Amgys Interiors has worked out for our clients satisfactorily.",
+    rating: 5,
+  },
+  {
+    name: "Mr. Zulfiqar Paracha",
+    role: "Chairman, Universal Corporation Pvt. Ltd. & ZP Homes",
+    text: "We have a long working relationship with Amgys Interiors and their dedication, project management, and services are very professional.",
     rating: 5,
   },
 ];
@@ -39,8 +51,8 @@ export default function Testimonials() {
           <div data-aos="fade-right">
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="/images/projects/commercial/prolog_2024_interior.jpg"
-                alt="AMGYS Interiors project"
+                src="/images/testimonials-ehad.jpg"
+                alt="EHAD Pharmacy — AMGYS Interiors project"
                 className="w-full h-[280px] sm:h-[360px] lg:h-[440px] object-cover"
               />
             </div>
@@ -60,7 +72,7 @@ export default function Testimonials() {
             <Swiper
               modules={[Pagination, Autoplay]}
               pagination={{ clickable: true }}
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              autoplay={{ delay: 4500, disableOnInteraction: false }}
               loop
               spaceBetween={30}
               className="testimonial-swiper pb-12"
@@ -78,8 +90,8 @@ export default function Testimonials() {
                       ))}
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-full bg-[#E84520] flex items-center justify-center text-white font-bold text-xs">
-                        {t.name.charAt(0)}
+                      <div className="w-9 h-9 rounded-full bg-[#E84520] flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
+                        {t.name.charAt(4)}
                       </div>
                       <div>
                         <p className="font-semibold text-[#080708] text-sm" style={{ fontFamily: "var(--font-playfair), serif" }}>{t.name}</p>

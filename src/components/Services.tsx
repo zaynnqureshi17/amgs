@@ -1,31 +1,37 @@
 "use client";
 
-import { FaBuilding, FaStore, FaCouch, FaTools } from "react-icons/fa";
+import { FaDraftingCompass, FaHammer, FaCouch } from "react-icons/fa";
 
 const services = [
   {
-    icon: FaBuilding,
-    title: "Corporate Interiors",
-    description: "Turnkey interior solutions for corporate offices, designed for productivity and modern aesthetics.",
-    image: "/images/projects/commercial/ubl_it_&_is_2024_interior.jpg",
+    icon: FaDraftingCompass,
+    title: "Interior Design & Architecture",
+    image: "/images/projects/commercial/ubl_it_is/1.jpg",
+    items: [
+      "Interior Designing",
+      "Architectural Planning",
+      "Landscape Designing",
+      "Project Management & Consultancy",
+    ],
   },
   {
-    icon: FaStore,
-    title: "Retail & Kiosks",
-    description: "Eye-catching retail outlets and kiosk designs that elevate your brand presence in any mall or venue.",
-    image: "/images/projects/kiosk/edenrobe_beauty_2024_kiosk.jpg",
-  },
-  {
-    icon: FaTools,
-    title: "Renovation",
-    description: "Complete interior renovation services to transform existing spaces with modern finishes and layouts.",
-    image: "/images/projects/commercial/the_mins_2024_renovation.jpg",
+    icon: FaHammer,
+    title: "Interior Renovation",
+    image: "/images/projects/commercial/the_mins/1.jpg",
+    items: [
+      "Corporate Offices",
+      "Retail Outlets & Kiosks",
+      "Residential Spaces",
+    ],
   },
   {
     icon: FaCouch,
-    title: "Custom Furniture",
-    description: "Bespoke furniture manufacturing for residential and corporate needs, built to your exact specifications.",
-    image: "/images/projects/furniture/eleganz_luxury_2019_f.jpg",
+    title: "Furniture",
+    image: "/images/projects/furniture/eleganz/1.jpg",
+    items: [
+      "Residential Furniture",
+      "Office Furniture",
+    ],
   },
 ];
 
@@ -46,7 +52,7 @@ export default function Services() {
           <div className="w-14 h-[2px] bg-[#E84520] mx-auto mt-4" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {services.map((s, i) => {
             const Icon = s.icon;
             return (
@@ -56,28 +62,35 @@ export default function Services() {
                 data-aos="fade-up"
                 data-aos-delay={i * 80}
               >
-                <div className="h-[180px] overflow-hidden">
+                <div className="h-[200px] overflow-hidden">
                   <img
                     src={s.image}
                     alt={s.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-5">
-                  <div className="flex items-center gap-3 mb-3">
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
                     <div className="w-9 h-9 bg-[#E84520] rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon className="text-white text-sm" />
                     </div>
                     <h3
-                      className="text-base font-bold text-[#080708]"
+                      className="text-base font-bold text-[#080708] leading-tight"
                       style={{ fontFamily: "var(--font-playfair), serif" }}
                     >
                       {s.title}
                     </h3>
                   </div>
-                  <p className="text-[13px] text-[#4c505b] leading-[1.7]">{s.description}</p>
-                  <a href="/projects" className="inline-flex items-center text-[#E84520] font-semibold text-[13px] mt-4 gap-1.5 hover:gap-2.5 transition-all">
-                    Learn More <span>&rarr;</span>
+                  <ul className="space-y-2">
+                    {s.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-[13px] text-[#4c505b]">
+                        <span className="text-[#E84520] mt-[3px] flex-shrink-0">&#8250;</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <a href="/contact" className="inline-flex items-center text-[#E84520] font-semibold text-[13px] mt-5 gap-1.5 hover:gap-2.5 transition-all">
+                    Get a Quote <span>&rarr;</span>
                   </a>
                 </div>
               </div>

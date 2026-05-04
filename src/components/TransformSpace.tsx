@@ -17,7 +17,7 @@ const tabs = [
   {
     id: "office",
     label: "CEO Office",
-    tagline: "A bare shell transformed into a premium executive office with warm wood panelling and custom furniture.",
+    tagline: "An empty space transformed into a vibrant Al-Ameen Funds meeting room with bold geometric walls.",
     before: "/images/before-after/before-1.jpeg",
     after: "/images/before-after/after-1.jpeg",
   },

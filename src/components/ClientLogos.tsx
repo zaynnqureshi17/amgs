@@ -13,6 +13,7 @@ const logos = [
   "schlumberger.jpg",
   "Tapal_Tea.png",
   "Lakson_Group.png",
+  "Lakson tobacco.png",
   "geo-logo.png",
   "getz-pharma.png",
   "Martin_Dow.png",
@@ -25,6 +26,41 @@ const logos = [
   "optico opticians.jpg",
   "shaheen foundation PAF.jpg",
   "ACCA_logo.png",
+  "amin adnan.jpg",
+  "brady bread.jpg",
+  "brooke bond.png",
+  "clover.jpg",
+  "cotton_and_silk_logo.jpg",
+  "cybernet.jpg",
+  "dadabhoy.jpg",
+  "dalda.jpeg",
+  "days inn.jpg",
+  "Efroze.png",
+  "ehad.jpg",
+  "endrobe.jpg",
+  "equity textile.jpg",
+  "eura shipping agencies.jpg",
+  "goethe institut.png",
+  "i2 telecom.jpg",
+  "ivolve.jpg",
+  "jang.png",
+  "malak.jpg",
+  "maple pharma.png",
+  "master oil.jpg",
+  "naseem masala- recipe mix.jpg",
+  "noble traders.avif",
+  "oasis.jpg",
+  "pakistan enginering concil.jpg",
+  "pakvitae_logo.jpg",
+  "patel hospital.jpg",
+  "pharmacie plus.jpg",
+  "prolog express line.jpg",
+  "quice.png",
+  "sana sarah salon.jpg",
+  "shadman.jpg",
+  "tetley.png",
+  "tradkey.jpg",
+  "ahm-securities.png",
 ];
 
 export default function ClientLogos() {
@@ -44,16 +80,18 @@ export default function ClientLogos() {
           <div className="w-14 h-[2px] bg-[#E84520] mx-auto mt-4" />
         </div>
 
-        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4 sm:gap-6 items-center">
+        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-4 sm:gap-5 items-center">
           {logos.map((logo, i) => (
             <div
               key={i}
-              className="flex items-center justify-center p-2 sm:p-3 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+              className="flex items-center justify-center p-2 opacity-80 hover:opacity-100 transition-opacity duration-300"
+              data-aos="fade-up"
+              data-aos-delay={Math.min(i * 20, 300)}
             >
               <img
                 src={`/images/logos/${logo}`}
                 alt="Client"
-                className="max-h-[32px] sm:max-h-[40px] w-auto object-contain"
+                className="max-h-[30px] sm:max-h-[36px] w-auto object-contain"
               />
             </div>
           ))}

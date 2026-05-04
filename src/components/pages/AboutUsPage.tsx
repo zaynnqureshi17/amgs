@@ -43,7 +43,7 @@ export default function AboutUsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 rounded-xl overflow-hidden shadow-lg mb-16">
           <div className="lg:col-span-3">
             <img
-              src="/images/projects/commercial/optico_2023_interior.jpg"
+              src="/images/about-cafe.jpg"
               alt="AMGYS Interior project"
               className="w-full h-[250px] sm:h-[320px] lg:h-full object-cover"
             />

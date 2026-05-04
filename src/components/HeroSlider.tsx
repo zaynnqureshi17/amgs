@@ -10,7 +10,7 @@ const slides = [
     subtitle: "50+ Years of Crafting Premium Spaces",
   },
   {
-    image: "/images/projects/commercial/pak_vitae_2023_interior.jpg",
+    image: "/images/hero-corporate.jpg",
     title: "Corporate Interiors",
     subtitle: "Turnkey Solutions for Modern Offices",
   },
