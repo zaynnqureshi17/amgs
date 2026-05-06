@@ -3,212 +3,251 @@
 import { useState, useEffect, useCallback } from "react";
 import { FaTimes, FaSearchPlus, FaSearchMinus, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const categories = ["All Projects", "Interior & Renovation", "Kiosk", "Turnkey", "Furniture"];
+const categories = ["All Projects", "Corporate Offices", "Retail Outlets & Kiosks", "Residential Projects", "Furniture"];
 
 const allProjects = [
-  { title: "UBL Cafeteria", year: "2023", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/ubl_cafeteria/1.jpg",
-    "/images/projects/commercial/ubl_cafeteria/2.jpg",
-    "/images/projects/commercial/ubl_cafeteria/3.jpg",
-    "/images/projects/commercial/ubl_cafeteria/4.jpg",
+  // ─── CORPORATE OFFICES ──────────────────────────────────────────────────────
+  { title: "UBL Fund — North Nazimabad", year: "2026", category: "Corporate Offices", images: [
+    "/images/projects/corporate/ubl_nn/1.jpg",
+    "/images/projects/corporate/ubl_nn/2.jpg",
+    "/images/projects/corporate/ubl_nn/3.jpg",
+    "/images/projects/corporate/ubl_nn/4.jpg",
   ]},
-  { title: "Edenrobe Beauty", year: "2024", category: "Kiosk", images: [
-    "/images/projects/kiosk/edenrobe/1.jpeg",
-    "/images/projects/kiosk/edenrobe/2.jpeg",
-    "/images/projects/kiosk/edenrobe/3.jpeg",
-    "/images/projects/kiosk/edenrobe/4.jpeg",
+  { title: "UBL Funds IT & IS", year: "2024", category: "Corporate Offices", images: [
+    "/images/projects/corporate/ubl_it/1.jpg",
+    "/images/projects/corporate/ubl_it/2.jpg",
+    "/images/projects/corporate/ubl_it/3.jpg",
+    "/images/projects/corporate/ubl_it/4.jpg",
   ]},
-  { title: "UBL IT & IS", year: "2024", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/ubl_it_is/1.jpg",
-    "/images/projects/commercial/ubl_it_is/2.jpg",
-    "/images/projects/commercial/ubl_it_is/3.jpg",
-    "/images/projects/commercial/ubl_it_is/4.jpg",
+  { title: "Prolog Express Line", year: "2024", category: "Corporate Offices", images: [
+    "/images/projects/corporate/prolog/1.jpg",
+    "/images/projects/corporate/prolog/2.jpg",
+    "/images/projects/corporate/prolog/3.jpg",
   ]},
-  { title: "UBL Day Care", year: "2024", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/ubl_day_care/1.jpg",
-    "/images/projects/commercial/ubl_day_care/2.jpg",
-    "/images/projects/commercial/ubl_day_care/3.jpg",
-    "/images/projects/commercial/ubl_day_care/4.jpg",
+  { title: "AHM Securities", year: "2023", category: "Corporate Offices", images: [
+    "/images/projects/corporate/ahm/1.jpg",
+    "/images/projects/corporate/ahm/2.jpg",
   ]},
-  { title: "Swiss Ligna Gloss", year: "2024", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/swiss_ligna/1.jpg",
-    "/images/projects/commercial/swiss_ligna/2.jpg",
-    "/images/projects/commercial/swiss_ligna/3.jpg",
-    "/images/projects/commercial/swiss_ligna/4.jpg",
+  { title: "Liberty Daharki Power", year: "2023", category: "Corporate Offices", images: [
+    "/images/projects/corporate/liberty/1.jpg",
+    "/images/projects/corporate/liberty/2.jpg",
+    "/images/projects/corporate/liberty/3.jpg",
+    "/images/projects/corporate/liberty/4.jpg",
   ]},
-  { title: "PROLOG Express", year: "2024", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/prolog/1.jpg",
-    "/images/projects/commercial/prolog/2.jpg",
-    "/images/projects/commercial/prolog/3.jpg",
-    "/images/projects/commercial/prolog/4.jpg",
+  { title: "UBL Funds Cafeteria — 4th Floor", year: "2023", category: "Corporate Offices", images: [
+    "/images/projects/corporate/ubl_cafe_4th/1.jpg",
+    "/images/projects/corporate/ubl_cafe_4th/2.jpg",
+    "/images/projects/corporate/ubl_cafe_4th/3.jpg",
   ]},
-  { title: "The Mins", year: "2024", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/the_mins/1.jpg",
-    "/images/projects/commercial/the_mins/2.jpg",
-    "/images/projects/commercial/the_mins/3.jpg",
-    "/images/projects/commercial/the_mins/4.jpg",
+  { title: "Tapal Tea", year: "2022", category: "Corporate Offices", images: [
+    "/images/projects/corporate/tapal/1.jpg",
+    "/images/projects/corporate/tapal/2.jpg",
+    "/images/projects/corporate/tapal/3.jpg",
   ]},
-  { title: "OPTICO", year: "2023", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/optico/1.jpg",
-    "/images/projects/commercial/optico/2.jpg",
-    "/images/projects/commercial/optico/3.jpg",
-    "/images/projects/commercial/optico/4.jpg",
+  { title: "UBL Funds HR & MKT", year: "2022", category: "Corporate Offices", images: [
+    "/images/projects/corporate/ubl_hr/1.jpg",
+    "/images/projects/corporate/ubl_hr/2.jpg",
+    "/images/projects/corporate/ubl_hr/3.jpg",
+    "/images/projects/corporate/ubl_hr/4.jpg",
   ]},
-  { title: "Pak Vitae", year: "2023", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/pak_vitae/1.jpg",
-    "/images/projects/commercial/pak_vitae/2.jpg",
-    "/images/projects/commercial/pak_vitae/3.jpg",
-    "/images/projects/commercial/pak_vitae/4.jpg",
+  { title: "Shaheen Complex Lobby", year: "2021", category: "Corporate Offices", images: [
+    "/images/projects/corporate/shaheen/1.jpg",
+    "/images/projects/corporate/shaheen/2.jpg",
+    "/images/projects/corporate/shaheen/3.jpg",
+    "/images/projects/corporate/shaheen/4.jpg",
   ]},
-  { title: "AHM Securities", year: "2023", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/ahm/1.jpg",
-    "/images/projects/commercial/ahm/2.jpg",
-    "/images/projects/commercial/ahm/3.jpg",
-    "/images/projects/commercial/ahm/4.jpg",
+  { title: "MCB Funds Sales Office", year: "2020", category: "Corporate Offices", images: [
+    "/images/projects/corporate/mcb_funds/1.jpg",
+    "/images/projects/corporate/mcb_funds/2.jpg",
+    "/images/projects/corporate/mcb_funds/3.jpg",
+    "/images/projects/corporate/mcb_funds/4.jpg",
   ]},
-  { title: "UBL Fund Managers — HR", year: "2022", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/ubl_fund_managers/1.jpg",
-    "/images/projects/commercial/ubl_fund_managers/2.jpg",
-    "/images/projects/commercial/ubl_fund_managers/3.jpg",
-    "/images/projects/commercial/ubl_fund_managers/4.jpg",
+  { title: "iVolve Technologies", year: "2020", category: "Corporate Offices", images: [
+    "/images/projects/corporate/ivolve/1.jpg",
+    "/images/projects/corporate/ivolve/2.jpg",
   ]},
-  { title: "Sana Sarah Salon", year: "2022", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/sana_sarah/1.jpg",
-    "/images/projects/commercial/sana_sarah/2.jpg",
-    "/images/projects/commercial/sana_sarah/3.jpg",
-    "/images/projects/commercial/sana_sarah/4.jpg",
+  { title: "UBL Funds — Peshawar", year: "2019", category: "Corporate Offices", images: [
+    "/images/projects/corporate/ubl_peshawar/1.jpg",
+    "/images/projects/corporate/ubl_peshawar/2.jpg",
+    "/images/projects/corporate/ubl_peshawar/3.jpg",
+    "/images/projects/corporate/ubl_peshawar/4.jpg",
   ]},
-  { title: "Ehad Pharmacy", year: "2022", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/ehad_pharmacy/1.jpg",
-    "/images/projects/commercial/ehad_pharmacy/2.jpg",
-    "/images/projects/commercial/ehad_pharmacy/3.jpg",
-    "/images/projects/commercial/ehad_pharmacy/4.jpg",
+  { title: "Oasis Travels", year: "2011", category: "Corporate Offices", images: [
+    "/images/projects/corporate/oasis/1.jpg",
+    "/images/projects/corporate/oasis/2.jpg",
+    "/images/projects/corporate/oasis/3.jpg",
+    "/images/projects/corporate/oasis/4.jpg",
   ]},
-  { title: "Malak", year: "2022", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/malak/1.jpg",
-    "/images/projects/commercial/malak/2.jpg",
-    "/images/projects/commercial/malak/3.jpg",
-    "/images/projects/commercial/malak/4.jpg",
+  { title: "Tradekey Pakistan", year: "2011", category: "Corporate Offices", images: [
+    "/images/projects/corporate/tradekey/1.jpg",
+    "/images/projects/corporate/tradekey/2.jpg",
+    "/images/projects/corporate/tradekey/3.jpg",
   ]},
-  { title: "Tapal", year: "2022", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/tapal/1.jpg",
-    "/images/projects/commercial/tapal/2.jpg",
-    "/images/projects/commercial/tapal/3.jpg",
+  { title: "MultiTech", year: "2010", category: "Corporate Offices", images: [
+    "/images/projects/corporate/multitech/1.jpg",
+    "/images/projects/corporate/multitech/2.jpg",
   ]},
-  { title: "Jewels", year: "2021", category: "Kiosk", images: [
-    "/images/projects/kiosk/jewels/1.jpeg",
-    "/images/projects/kiosk/jewels/2.jpeg",
-    "/images/projects/kiosk/jewels/3.jpeg",
+  { title: "I-2 Pakistan", year: "2010", category: "Corporate Offices", images: [
+    "/images/projects/corporate/i2/1.jpg",
+    "/images/projects/corporate/i2/2.jpg",
+    "/images/projects/corporate/i2/3.jpg",
   ]},
-  { title: "iVolve Technologies", year: "2020", category: "Turnkey", images: [
-    "/images/projects/turnkey/ivolve/1.jpg",
-    "/images/projects/turnkey/ivolve/2.jpg",
-    "/images/projects/turnkey/ivolve/3.jpg",
-    "/images/projects/turnkey/ivolve/4.jpg",
+  { title: "Haroon Travel", year: "2012", category: "Corporate Offices", images: [
+    "/images/projects/corporate/haroon/1.jpg",
+    "/images/projects/corporate/haroon/2.jpg",
+    "/images/projects/corporate/haroon/3.jpg",
+    "/images/projects/corporate/haroon/4.jpg",
   ]},
-  { title: "UBL", year: "2020", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/ubl.jpg",
+  { title: "Schlumberger Pakistan", year: "2013", category: "Corporate Offices", images: [
+    "/images/projects/corporate/schlumberger/1.jpg",
+    "/images/projects/corporate/schlumberger/2.jpg",
+    "/images/projects/corporate/schlumberger/3.jpg",
+    "/images/projects/corporate/schlumberger/4.jpg",
   ]},
-  { title: "MCB (Arif Habib)", year: "2020", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/mcb/1.jpg",
-    "/images/projects/commercial/mcb/2.jpg",
-    "/images/projects/commercial/mcb/3.jpg",
-    "/images/projects/commercial/mcb/4.jpg",
+  { title: "Medlife Clinics", year: "2013", category: "Corporate Offices", images: [
+    "/images/projects/corporate/medlife/1.jpg",
+    "/images/projects/corporate/medlife/2.jpg",
   ]},
-  { title: "Rameeza Naviwala", year: "2020", category: "Furniture", images: [
-    "/images/projects/furniture/rameeza/1.jpeg",
-    "/images/projects/furniture/rameeza/2.jpeg",
-    "/images/projects/furniture/rameeza/3.jpeg",
-    "/images/projects/furniture/rameeza/4.jpeg",
+  { title: "Ten Sports", year: "2014", category: "Corporate Offices", images: [
+    "/images/projects/corporate/ten_sports/1.jpg",
+    "/images/projects/corporate/ten_sports/2.jpg",
+    "/images/projects/corporate/ten_sports/3.jpg",
+    "/images/projects/corporate/ten_sports/4.jpg",
   ]},
-  { title: "Pharmacie Plus", year: "2019", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/pharmacie_plus/1.jpeg",
+  { title: "Lakson Group", year: "2008", category: "Corporate Offices", images: [
+    "/images/projects/corporate/lakson/1.jpg",
+    "/images/projects/corporate/lakson/2.jpg",
   ]},
-  { title: "Al Baraka Bank", year: "2019", category: "Furniture", images: [
-    "/images/projects/furniture/al_baraka/1.jpeg",
-    "/images/projects/furniture/al_baraka/2.jpeg",
-    "/images/projects/furniture/al_baraka/3.jpeg",
-    "/images/projects/furniture/al_baraka/4.jpeg",
+  { title: "Master Oil", year: "2008", category: "Corporate Offices", images: [
+    "/images/projects/corporate/master_oil/1.jpg",
+    "/images/projects/corporate/master_oil/2.jpg",
+    "/images/projects/corporate/master_oil/3.jpg",
   ]},
-  { title: "Eleganz Luxury", year: "2019", category: "Furniture", images: [
-    "/images/projects/furniture/eleganz/1.jpg",
-    "/images/projects/furniture/eleganz/2.jpg",
-    "/images/projects/furniture/eleganz/3.jpg",
-    "/images/projects/furniture/eleganz/4.jpg",
+  { title: "Efroze Chemical", year: "2007", category: "Corporate Offices", images: [
+    "/images/projects/corporate/efroze/1.jpg",
+    "/images/projects/corporate/efroze/2.jpg",
+    "/images/projects/corporate/efroze/3.jpg",
   ]},
-  { title: "Quice Food", year: "2019", category: "Furniture", images: [
-    "/images/projects/furniture/quice_food/1.jpg",
-    "/images/projects/furniture/quice_food/2.jpg",
-    "/images/projects/furniture/quice_food/3.jpg",
-    "/images/projects/furniture/quice_food/4.jpeg",
+  { title: "UBL Funds Cafeteria — 2nd Floor", year: "2025", category: "Corporate Offices", images: [
+    "/images/projects/corporate/ubl_cafe_2nd/1.jpg",
+    "/images/projects/corporate/ubl_cafe_2nd/2.jpg",
   ]},
-  { title: "Ice Creamoo", year: "2018", category: "Kiosk", images: [
-    "/images/projects/kiosk/ice_creamoo/1.jpg",
-    "/images/projects/kiosk/ice_creamoo/2.jpg",
-    "/images/projects/kiosk/ice_creamoo/3.jpg",
-    "/images/projects/kiosk/ice_creamoo/4.jpg",
+
+  // ─── RETAIL OUTLETS & KIOSKS ────────────────────────────────────────────────
+  { title: "OPTICO — The Opticians", year: "2023", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/optico/1.jpg",
+    "/images/projects/retail/optico/2.jpg",
+    "/images/projects/retail/optico/3.jpg",
+    "/images/projects/retail/optico/4.jpg",
   ]},
-  { title: "Mehran Food", year: "2018", category: "Kiosk", images: [
-    "/images/projects/kiosk/mehran_food/1.jpg",
-    "/images/projects/kiosk/mehran_food/2.jpg",
-    "/images/projects/kiosk/mehran_food/3.jpg",
-    "/images/projects/kiosk/mehran_food/4.jpg",
+  { title: "Ehad Pharmacy", year: "2023", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/ehad/1.jpg",
+    "/images/projects/retail/ehad/2.jpg",
+    "/images/projects/retail/ehad/3.jpg",
+    "/images/projects/retail/ehad/4.jpg",
   ]},
-  { title: "Soneri Bank", year: "2018", category: "Furniture", images: [
-    "/images/projects/furniture/soneri/1.jpg",
-    "/images/projects/furniture/soneri/2.jpg",
-    "/images/projects/furniture/soneri/3.jpg",
+  { title: "Edenrobe Beauty", year: "2024", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/edenrobe/1.jpeg",
+    "/images/projects/retail/edenrobe/2.jpeg",
   ]},
-  { title: "Jubilee Takaful", year: "2017", category: "Kiosk", images: [
-    "/images/projects/kiosk/jubilee/1.jpg",
-    "/images/projects/kiosk/jubilee/2.jpg",
-    "/images/projects/kiosk/jubilee/3.jpg",
-    "/images/projects/kiosk/jubilee/4.jpg",
+  { title: "Swiss Ligna Gloss Display", year: "2024", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/swiss_ligna/1.jpg",
+    "/images/projects/retail/swiss_ligna/2.jpg",
+    "/images/projects/retail/swiss_ligna/3.jpg",
+    "/images/projects/retail/swiss_ligna/4.jpg",
   ]},
-  { title: "Cotton & Silk", year: "2017", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/cotton_silk/1.jpg",
-    "/images/projects/commercial/cotton_silk/2.jpg",
-    "/images/projects/commercial/cotton_silk/3.jpg",
-    "/images/projects/commercial/cotton_silk/4.jpg",
+  { title: "The Mins Bespoke", year: "2024", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/the_mins/1.jpg",
+    "/images/projects/retail/the_mins/2.jpg",
+    "/images/projects/retail/the_mins/3.jpg",
+    "/images/projects/retail/the_mins/4.jpg",
   ]},
-  { title: "Suraj Cotton Mill", year: "2016", category: "Turnkey", images: [
-    "/images/projects/turnkey/suraj/1.jpg",
+  { title: "Sana Sarah Salon & Spa", year: "2022", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/sana_sarah/1.jpg",
+    "/images/projects/retail/sana_sarah/2.jpg",
+    "/images/projects/retail/sana_sarah/3.jpg",
+    "/images/projects/retail/sana_sarah/4.jpg",
   ]},
-  { title: "Eat Festival Mezan", year: "2014", category: "Kiosk", images: [
-    "/images/projects/kiosk/eat_festival/1.jpg",
-    "/images/projects/kiosk/eat_festival/2.jpg",
-    "/images/projects/kiosk/eat_festival/3.jpg",
+  { title: "Jewels", year: "2021", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/jewels/1.jpeg",
+    "/images/projects/retail/jewels/2.jpeg",
+    "/images/projects/retail/jewels/3.jpeg",
   ]},
-  { title: "Ten Sport", year: "2014", category: "Turnkey", images: [
-    "/images/projects/turnkey/ten_sport/1.jpg",
-    "/images/projects/turnkey/ten_sport/2.jpg",
-    "/images/projects/turnkey/ten_sport/3.jpg",
-    "/images/projects/turnkey/ten_sport/4.jpg",
+  { title: "Ice Creamoo — Atrium Mall", year: "2018", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/ice_creamoo/1.jpg",
+    "/images/projects/retail/ice_creamoo/2.jpg",
+    "/images/projects/retail/ice_creamoo/3.jpg",
+    "/images/projects/retail/ice_creamoo/4.jpg",
   ]},
-  { title: "Titan Watches", year: "2014", category: "Turnkey", images: [
-    "/images/projects/turnkey/titan/1.jpg",
-    "/images/projects/turnkey/titan/2.jpeg",
+  { title: "Mehran Food", year: "2018", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/mehran/1.jpg",
+    "/images/projects/retail/mehran/2.jpg",
+    "/images/projects/retail/mehran/3.jpg",
+    "/images/projects/retail/mehran/4.jpg",
   ]},
-  { title: "Med Life (Dr. Nadir Shah)", year: "2013", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/med_life/1.jpg",
-    "/images/projects/commercial/med_life/2.jpg",
-    "/images/projects/commercial/med_life/3.jpeg",
+  { title: "Ideas by Gul Ahmed", year: "2018", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/ideas/1.jpg",
   ]},
-  { title: "Schlumberger", year: "2013", category: "Interior & Renovation", images: [
-    "/images/projects/commercial/schlumberger/1.jpg",
-    "/images/projects/commercial/schlumberger/2.jpg",
-    "/images/projects/commercial/schlumberger/3.jpg",
-    "/images/projects/commercial/schlumberger/4.jpg",
+  { title: "Jubilee Takaful", year: "2017", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/jubilee/1.jpg",
+    "/images/projects/retail/jubilee/2.jpg",
+    "/images/projects/retail/jubilee/3.jpg",
+    "/images/projects/retail/jubilee/4.jpg",
   ]},
-  { title: "Tradekey Pakistan", year: "2011", category: "Turnkey", images: [
-    "/images/projects/turnkey/tradekey/1.jpg",
-    "/images/projects/turnkey/tradekey/2.jpg",
-    "/images/projects/turnkey/tradekey/3.jpg",
-    "/images/projects/turnkey/tradekey/4.jpeg",
+  { title: "Pharmacie Plus", year: "2019", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/pharmacie/1.jpg",
+  ]},
+  { title: "Eat Festival Mezan", year: "2014", category: "Retail Outlets & Kiosks", images: [
+    "/images/projects/retail/eat_mezan/1.jpg",
+    "/images/projects/retail/eat_mezan/2.jpg",
+  ]},
+
+  // ─── RESIDENTIAL PROJECTS ───────────────────────────────────────────────────
+  { title: "Mr. Saad Ahmed Bungalow", year: "2025", category: "Residential Projects", images: [
+    "/images/projects/residential/saad/1.jpeg",
+    "/images/projects/residential/saad/2.jpeg",
+    "/images/projects/residential/saad/3.jpeg",
+    "/images/projects/residential/saad/4.jpeg",
+  ]},
+  { title: "Mr. Kashif Rafi Bungalow", year: "2024", category: "Residential Projects", images: [
+    "/images/projects/residential/kashif_rafi/1.jpeg",
+    "/images/projects/residential/kashif_rafi/2.jpeg",
+    "/images/projects/residential/kashif_rafi/3.jpeg",
+    "/images/projects/residential/kashif_rafi/4.jpeg",
+  ]},
+  { title: "Mr. Umair Ahmed Apartment", year: "2023", category: "Residential Projects", images: [
+    "/images/projects/residential/umair/1.jpeg",
+    "/images/projects/residential/umair/2.jpeg",
+    "/images/projects/residential/umair/3.jpeg",
+    "/images/projects/residential/umair/4.jpeg",
+  ]},
+  { title: "Mr. Muhammad Imran Bungalow", year: "2021", category: "Residential Projects", images: [
+    "/images/projects/residential/imran/1.jpg",
+    "/images/projects/residential/imran/2.jpg",
+    "/images/projects/residential/imran/3.jpg",
+    "/images/projects/residential/imran/4.jpg",
+  ]},
+
+  // ─── FURNITURE ──────────────────────────────────────────────────────────────
+  { title: "Office Furniture", year: "2024", category: "Furniture", images: [
+    "/images/projects/furniture/office/1.jpg",
+    "/images/projects/furniture/office/2.jpg",
+    "/images/projects/furniture/office/3.jpg",
+    "/images/projects/furniture/office/4.jpg",
+    "/images/projects/furniture/office/5.jpg",
+    "/images/projects/furniture/office/6.jpg",
+  ]},
+  { title: "Residential Furniture", year: "2024", category: "Furniture", images: [
+    "/images/projects/furniture/residential/1.jpg",
+    "/images/projects/furniture/residential/2.jpg",
+    "/images/projects/furniture/residential/3.jpg",
+    "/images/projects/furniture/residential/4.jpg",
+    "/images/projects/furniture/residential/5.jpg",
+    "/images/projects/furniture/residential/6.jpg",
   ]},
 ];
 
-const folders = ["Interior & Renovation", "Kiosk", "Turnkey", "Furniture"];
+const folders = ["Corporate Offices", "Retail Outlets & Kiosks", "Residential Projects", "Furniture"];
 
 type Project = (typeof allProjects)[number];
 
@@ -239,7 +278,6 @@ function Lightbox({ project, onClose }: { project: Project; onClose: () => void 
 
   return (
     <div className="fixed inset-0 z-[100] bg-black/90 flex flex-col" onClick={onClose}>
-      {/* Top bar */}
       <div className="flex items-center justify-between px-5 py-3 flex-shrink-0" onClick={(e) => e.stopPropagation()}>
         <div>
           <p className="text-white font-semibold text-sm">{project.title}</p>
@@ -262,7 +300,6 @@ function Lightbox({ project, onClose }: { project: Project; onClose: () => void 
         </div>
       </div>
 
-      {/* Image area */}
       <div className="flex-1 overflow-auto flex items-center justify-center p-4 relative" onClick={(e) => e.stopPropagation()}>
         {total > 1 && (
           <button onClick={prev}
@@ -285,7 +322,6 @@ function Lightbox({ project, onClose }: { project: Project; onClose: () => void 
         )}
       </div>
 
-      {/* Dot indicators */}
       {total > 1 && (
         <div className="flex justify-center gap-1.5 pb-4 flex-shrink-0" onClick={(e) => e.stopPropagation()}>
           {project.images.map((_, i) => (
@@ -350,7 +386,6 @@ export default function PortfolioPage() {
           </p>
         </div>
 
-        {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((cat) => (
             <button

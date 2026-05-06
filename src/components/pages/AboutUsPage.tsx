@@ -1,10 +1,11 @@
 "use client";
 
 const management = [
-  { name: "Sohail Y. Minhas", role: "Founder & CEO", qual: "Diploma Associate Engineering 1978" },
-  { name: "Zaigham Minhas", role: "Chief Operating Officer", qual: "MBA Finance" },
-  { name: "Syed Talha Ali", role: "Senior Manager Projects", qual: "MPA-MHRM" },
-  { name: "Nehal Ahmed", role: "Operations", qual: "" },
+  { name: "Sohail Y. Minhas", role: "Chief Executive Officer", qual: "Diploma Associate Engineering 1978", photo: "/images/staff/sohail.jpeg" },
+  { name: "Zaigham Minhas", role: "Chief Operating Officer", qual: "MBA Finance", photo: "/images/staff/zaigham.jpg" },
+  { name: "Danish Minhas (Late)", role: "Director Business Operations", qual: "", photo: "/images/staff/danish.jpg" },
+  { name: "Syed Talha Ali", role: "Senior Manager Projects", qual: "MPA-MHRM", photo: null },
+  { name: "Nehal Ahmed", role: "Operations", qual: "", photo: null },
 ];
 
 const supervisory = [
@@ -102,9 +103,14 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {management.map((m, i) => (
               <div key={i} className="bg-[#f7f7f7] rounded-xl p-5 text-center" data-aos="fade-up" data-aos-delay={i * 60}>
-                <div className="w-14 h-14 rounded-full bg-[#E84520] flex items-center justify-center text-white font-bold text-lg mx-auto mb-3" style={{ fontFamily: "var(--font-playfair), serif" }}>
-                  {m.name.charAt(0)}
-                </div>
+                {m.photo ? (
+                  <img src={m.photo} alt={m.name}
+                    className="w-20 h-20 rounded-full object-cover object-top mx-auto mb-3 border-2 border-white shadow-md" />
+                ) : (
+                  <div className="w-20 h-20 rounded-full bg-[#E84520] flex items-center justify-center text-white font-bold text-2xl mx-auto mb-3" style={{ fontFamily: "var(--font-playfair), serif" }}>
+                    {m.name.charAt(0)}
+                  </div>
+                )}
                 <p className="font-semibold text-sm text-[#080708]" style={{ fontFamily: "var(--font-playfair), serif" }}>{m.name}</p>
                 <p className="text-[11px] text-[#E84520] font-medium mt-0.5">{m.role}</p>
                 {m.qual && <p className="text-[10px] text-[#4c505b] mt-1">{m.qual}</p>}

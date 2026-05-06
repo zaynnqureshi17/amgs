@@ -7,8 +7,8 @@ const navLinks = ["Home", "Portfolio", "Our Story", "About", "Faqs"];
 const navHrefs = ["/", "/projects", "/our-story", "/about", "/faqs"];
 
 const projects = [
-  "OPTICO 2023", "Pak Vitae 2023", "UBL IT & IS 2024", "Swiss Ligna Gloss 2024",
-  "AHM Securities 2023", "Edenrobe Beauty 2024", "PROLOG 2024", "Sana Sarah Salon 2022",
+  "UBL Fund North Nazimabad 2026", "OPTICO 2023", "UBL IT & IS 2024", "Ehad Pharmacy 2023",
+  "AHM Securities 2023", "Swiss Ligna Gloss 2024", "Prolog Express 2024", "Sana Sarah Salon 2022",
 ];
 
 export default function Footer() {

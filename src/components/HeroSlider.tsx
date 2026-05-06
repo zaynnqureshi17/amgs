@@ -5,7 +5,7 @@ import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 
 const slides = [
   {
-    image: "/images/projects/commercial/optico_2023_interior.jpg",
+    image: "/images/projects/corporate/ubl_nn/1.jpg",
     title: "Interior Excellence",
     subtitle: "50+ Years of Crafting Premium Spaces",
   },
@@ -15,12 +15,12 @@ const slides = [
     subtitle: "Turnkey Solutions for Modern Offices",
   },
   {
-    image: "/images/projects/commercial/swiss_ligna_gloss_2024_interior.jpg",
+    image: "/images/projects/retail/swiss_ligna/1.jpg",
     title: "Retail & Commercial",
     subtitle: "Transforming Brands Through Design",
   },
   {
-    image: "/images/projects/furniture/eleganz_luxury_2019_f.jpg",
+    image: "/images/projects/furniture/residential/1.jpg",
     title: "Custom Furniture",
     subtitle: "Crafted With Precision & Passion",
   },
