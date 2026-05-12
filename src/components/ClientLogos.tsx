@@ -80,18 +80,19 @@ export default function ClientLogos() {
           <div className="w-14 h-[2px] bg-[#E84520] mx-auto mt-4" />
         </div>
 
-        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-3 sm:gap-4">
+        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-3">
           {logos.map((logo, i) => (
             <div
               key={i}
-              className="flex items-center justify-center p-2 h-12 sm:h-14 opacity-80 hover:opacity-100 transition-opacity duration-300"
+              className="border border-gray-100 rounded-lg bg-gray-50 hover:bg-white hover:border-gray-200 transition-all duration-300 h-16 sm:h-18 flex items-center justify-center p-3"
               data-aos="fade-up"
               data-aos-delay={Math.min(i * 20, 300)}
             >
               <img
                 src={`/images/logos/${logo}`}
                 alt="Client"
-                className="w-full h-full object-contain"
+                className="max-w-full max-h-full object-contain"
+                style={{ maxHeight: "40px" }}
               />
             </div>
           ))}
