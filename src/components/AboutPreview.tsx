@@ -58,7 +58,7 @@ export default function AboutPreview() {
           <div data-aos="fade-left">
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="/images/projects/commercial/ahm_2023_interior.jpg"
+                src="/images/about-amgys.jpeg"
                 alt="AMGYS Interiors project"
                 className="w-full h-[300px] sm:h-[380px] lg:h-[440px] object-cover"
               />
