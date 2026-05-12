@@ -6,11 +6,6 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/f
 const navLinks = ["Home", "Portfolio", "Our Story", "About", "Faqs"];
 const navHrefs = ["/", "/projects", "/our-story", "/about", "/faqs"];
 
-const projects = [
-  "UBL Fund North Nazimabad 2026", "OPTICO 2023", "UBL IT & IS 2024", "Ehad Pharmacy 2023",
-  "AHM Securities 2023", "Swiss Ligna Gloss 2024", "Prolog Express 2024", "Sana Sarah Salon 2022",
-];
-
 export default function Footer() {
   return (
     <footer>
@@ -42,20 +37,6 @@ export default function Footer() {
               <a key={i} href="#" className="w-8 h-8 rounded border border-gray-300 flex items-center justify-center text-[#4c505b] hover:text-[#E84520] hover:border-[#E84520] transition-colors text-xs" aria-label="social">
                 <Icon />
               </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Projects */}
-      <div className="border-t border-gray-200">
-        <div className="max-w-5xl mx-auto px-6 sm:px-10 py-6">
-          <h4 className="text-base font-semibold text-[#080708] mb-4" style={{ fontFamily: "var(--font-playfair), serif" }}>
-            Projects
-          </h4>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-2">
-            {projects.map((p) => (
-              <span key={p} className="text-[12px] text-[#4c505b]">{p}</span>
             ))}
           </div>
         </div>
