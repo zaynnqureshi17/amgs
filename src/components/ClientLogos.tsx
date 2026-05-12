@@ -84,15 +84,14 @@ export default function ClientLogos() {
           {logos.map((logo, i) => (
             <div
               key={i}
-              className="border border-gray-100 rounded-lg bg-gray-50 hover:bg-white hover:border-gray-200 transition-all duration-300 h-16 sm:h-18 flex items-center justify-center p-3"
+              className="border border-gray-100 rounded-lg bg-gray-50 hover:bg-white hover:border-gray-200 transition-all duration-300 h-16 sm:h-20 flex items-center justify-center p-2.5"
               data-aos="fade-up"
               data-aos-delay={Math.min(i * 20, 300)}
             >
               <img
                 src={`/images/logos/${logo}`}
                 alt="Client"
-                className="max-w-full max-h-full object-contain"
-                style={{ maxHeight: "40px" }}
+                className="w-full h-full object-contain"
               />
             </div>
           ))}
