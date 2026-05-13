@@ -6,7 +6,7 @@ const services = [
   {
     icon: FaDraftingCompass,
     title: "Interior Design & Architecture",
-    image: "/images/projects/corporate/ubl_it/1.jpg",
+    image: "/images/service-design.jpg",
     items: [
       "Interior Designing",
       "Architectural Planning",
@@ -17,7 +17,7 @@ const services = [
   {
     icon: FaHammer,
     title: "Interior Renovation",
-    image: "/images/projects/retail/the_mins/1.jpg",
+    image: "/images/service-renovation.jpg",
     items: [
       "Corporate Offices",
       "Retail Outlets & Kiosks",
@@ -27,7 +27,7 @@ const services = [
   {
     icon: FaCouch,
     title: "Furniture",
-    image: "/images/projects/furniture/residential/1.jpg",
+    image: "/images/service-furniture.jpg",
     items: [
       "Residential Furniture",
       "Office Furniture",

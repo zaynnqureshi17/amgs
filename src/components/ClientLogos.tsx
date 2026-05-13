@@ -63,6 +63,15 @@ const logos = [
   "ahm-securities.png",
 ];
 
+// Targeted scale boosts for logos that appear too small due to whitespace or wide aspect ratio.
+// No overflow-hidden on cards so nothing gets clipped.
+const logoScales: Record<string, number> = {
+  "JS BANK.jpg": 1.4,
+  "ten sport.png": 1.4,
+  "equity textile.jpg": 1.5,
+  "pakvitae_logo.jpg": 1.3,
+};
+
 export default function ClientLogos() {
   return (
     <section className="py-14 sm:py-18 md:py-24 bg-white">
@@ -81,20 +90,24 @@ export default function ClientLogos() {
         </div>
 
         <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-3">
-          {logos.map((logo, i) => (
-            <div
-              key={i}
-              className="border border-gray-100 rounded-lg bg-gray-50 hover:bg-white hover:border-gray-200 transition-all duration-300 h-16 sm:h-20 flex items-center justify-center p-2.5"
-              data-aos="fade-up"
-              data-aos-delay={Math.min(i * 20, 300)}
-            >
-              <img
-                src={`/images/logos/${logo}`}
-                alt="Client"
-                className="w-full h-full object-contain"
-              />
-            </div>
-          ))}
+          {logos.map((logo, i) => {
+            const scale = logoScales[logo];
+            return (
+              <div
+                key={i}
+                className="border border-gray-100 rounded-lg bg-gray-50 hover:bg-white hover:border-gray-200 transition-all duration-300 h-16 sm:h-20 flex items-center justify-center p-2.5"
+                data-aos="fade-up"
+                data-aos-delay={Math.min(i * 20, 300)}
+              >
+                <img
+                  src={`/images/logos/${logo}`}
+                  alt="Client"
+                  className="w-full h-full object-contain"
+                  style={scale ? { transform: `scale(${scale})` } : undefined}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

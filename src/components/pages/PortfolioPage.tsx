@@ -3,26 +3,26 @@
 import { useState, useEffect, useCallback } from "react";
 import { FaTimes, FaSearchPlus, FaSearchMinus, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const categories = ["All Projects", "Corporate Offices", "Retail Outlets & Kiosks", "Residential Projects", "Furniture"];
+const categories = ["All Projects", "Corporate Offices", "Retail Outlets & Kiosks", "Residential Projects", "Furniture", "Interior Design & Architecture"];
 
 const allProjects = [
   // ─── CORPORATE OFFICES ──────────────────────────────────────────────────────
   { title: "UBL Fund — North Nazimabad", year: "2026", category: "Corporate Offices", images: [
-    "/images/projects/corporate/ubl_nn/1.jpg",
-    "/images/projects/corporate/ubl_nn/2.jpg",
-    "/images/projects/corporate/ubl_nn/3.jpg",
-    "/images/projects/corporate/ubl_nn/4.jpg",
+    "/images/projects/corporate/ubl_nn/1.jpeg",
+    "/images/projects/corporate/ubl_nn/2.jpeg",
+    "/images/projects/corporate/ubl_nn/3.jpeg",
+    "/images/projects/corporate/ubl_nn/4.jpeg",
   ]},
   { title: "UBL Funds IT & IS", year: "2024", category: "Corporate Offices", images: [
-    "/images/projects/corporate/ubl_it/1.jpg",
-    "/images/projects/corporate/ubl_it/2.jpg",
-    "/images/projects/corporate/ubl_it/3.jpg",
-    "/images/projects/corporate/ubl_it/4.jpg",
+    "/images/projects/corporate/ubl_it/1.jpeg",
+    "/images/projects/corporate/ubl_it/2.jpeg",
+    "/images/projects/corporate/ubl_it/3.jpeg",
+    "/images/projects/corporate/ubl_it/4.jpeg",
   ]},
   { title: "Prolog Express Line", year: "2024", category: "Corporate Offices", images: [
-    "/images/projects/corporate/prolog/1.jpg",
-    "/images/projects/corporate/prolog/2.jpg",
-    "/images/projects/corporate/prolog/3.jpg",
+    "/images/projects/corporate/prolog/1.jpeg",
+    "/images/projects/corporate/prolog/2.jpeg",
+    "/images/projects/corporate/prolog/3.jpeg",
   ]},
   { title: "AHM Securities", year: "2023", category: "Corporate Offices", images: [
     "/images/projects/corporate/ahm/1.jpg",
@@ -51,10 +51,10 @@ const allProjects = [
     "/images/projects/corporate/ubl_hr/4.jpg",
   ]},
   { title: "Shaheen Complex Lobby", year: "2021", category: "Corporate Offices", images: [
-    "/images/projects/corporate/shaheen/1.jpg",
-    "/images/projects/corporate/shaheen/2.jpg",
-    "/images/projects/corporate/shaheen/3.jpg",
-    "/images/projects/corporate/shaheen/4.jpg",
+    "/images/projects/corporate/shaheen/1.jpeg",
+    "/images/projects/corporate/shaheen/2.jpeg",
+    "/images/projects/corporate/shaheen/3.jpeg",
+    "/images/projects/corporate/shaheen/4.jpeg",
   ]},
   { title: "MCB Funds Sales Office", year: "2020", category: "Corporate Offices", images: [
     "/images/projects/corporate/mcb_funds/1.jpg",
@@ -66,11 +66,11 @@ const allProjects = [
     "/images/projects/corporate/ivolve/1.jpg",
     "/images/projects/corporate/ivolve/2.jpg",
   ]},
-  { title: "UBL Funds — Peshawar", year: "2019", category: "Corporate Offices", images: [
-    "/images/projects/corporate/ubl_peshawar/1.jpg",
-    "/images/projects/corporate/ubl_peshawar/2.jpg",
-    "/images/projects/corporate/ubl_peshawar/3.jpg",
-    "/images/projects/corporate/ubl_peshawar/4.jpg",
+  { title: "UBL Funds — Peshawar", year: "2025", category: "Corporate Offices", images: [
+    "/images/projects/corporate/ubl_peshawar/1.jpeg",
+    "/images/projects/corporate/ubl_peshawar/2.jpeg",
+    "/images/projects/corporate/ubl_peshawar/3.jpeg",
+    "/images/projects/corporate/ubl_peshawar/4.jpeg",
   ]},
   { title: "Oasis Travels", year: "2011", category: "Corporate Offices", images: [
     "/images/projects/corporate/oasis/1.jpg",
@@ -129,8 +129,8 @@ const allProjects = [
     "/images/projects/corporate/efroze/3.jpg",
   ]},
   { title: "UBL Funds Cafeteria — 2nd Floor", year: "2025", category: "Corporate Offices", images: [
-    "/images/projects/corporate/ubl_cafe_2nd/1.jpg",
-    "/images/projects/corporate/ubl_cafe_2nd/2.jpg",
+    "/images/projects/corporate/ubl_cafe_2nd/1.jpeg",
+    "/images/projects/corporate/ubl_cafe_2nd/2.jpeg",
   ]},
 
   // ─── RETAIL OUTLETS & KIOSKS ────────────────────────────────────────────────
@@ -228,6 +228,86 @@ const allProjects = [
     "/images/projects/residential/imran/4.jpg",
   ]},
 
+  // ─── INTERIOR DESIGN & ARCHITECTURE ─────────────────────────────────────────
+  { title: "UBL Funds — North Nazimabad", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/ubl_nn/1.jpeg","/images/projects/interior_design/ubl_nn/2.jpeg","/images/projects/interior_design/ubl_nn/3.jpeg","/images/projects/interior_design/ubl_nn/4.jpeg","/images/projects/interior_design/ubl_nn/5.jpeg","/images/projects/interior_design/ubl_nn/6.jpeg","/images/projects/interior_design/ubl_nn/7.jpeg","/images/projects/interior_design/ubl_nn/8.jpeg","/images/projects/interior_design/ubl_nn/9.jpeg","/images/projects/interior_design/ubl_nn/10.jpeg","/images/projects/interior_design/ubl_nn/11.jpeg","/images/projects/interior_design/ubl_nn/12.jpeg","/images/projects/interior_design/ubl_nn/13.jpeg","/images/projects/interior_design/ubl_nn/14.jpeg","/images/projects/interior_design/ubl_nn/15.jpeg","/images/projects/interior_design/ubl_nn/16.jpeg",
+  ]},
+  { title: "Shaheen Complex", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/shaheen_complex/1.jpg","/images/projects/interior_design/shaheen_complex/2.jpg","/images/projects/interior_design/shaheen_complex/3.jpg","/images/projects/interior_design/shaheen_complex/4.jpg","/images/projects/interior_design/shaheen_complex/5.jpg","/images/projects/interior_design/shaheen_complex/6.jpg","/images/projects/interior_design/shaheen_complex/7.jpg","/images/projects/interior_design/shaheen_complex/8.jpg","/images/projects/interior_design/shaheen_complex/9.jpg","/images/projects/interior_design/shaheen_complex/10.jpg","/images/projects/interior_design/shaheen_complex/11.jpg","/images/projects/interior_design/shaheen_complex/12.jpg","/images/projects/interior_design/shaheen_complex/13.jpg","/images/projects/interior_design/shaheen_complex/14.jpg","/images/projects/interior_design/shaheen_complex/15.jpg","/images/projects/interior_design/shaheen_complex/16.jpg","/images/projects/interior_design/shaheen_complex/17.jpg","/images/projects/interior_design/shaheen_complex/18.jpg","/images/projects/interior_design/shaheen_complex/19.jpg","/images/projects/interior_design/shaheen_complex/20.jpg","/images/projects/interior_design/shaheen_complex/21.jpg","/images/projects/interior_design/shaheen_complex/22.jpg","/images/projects/interior_design/shaheen_complex/23.jpg","/images/projects/interior_design/shaheen_complex/24.jpg","/images/projects/interior_design/shaheen_complex/25.jpg","/images/projects/interior_design/shaheen_complex/26.jpg","/images/projects/interior_design/shaheen_complex/27.jpg","/images/projects/interior_design/shaheen_complex/28.jpg","/images/projects/interior_design/shaheen_complex/29.jpg","/images/projects/interior_design/shaheen_complex/30.jpg",
+  ]},
+  { title: "Hoechst Waiting Area Lobby", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/hoechst_lobby/1.jpeg","/images/projects/interior_design/hoechst_lobby/2.jpeg","/images/projects/interior_design/hoechst_lobby/3.jpeg","/images/projects/interior_design/hoechst_lobby/4.jpeg","/images/projects/interior_design/hoechst_lobby/5.jpeg","/images/projects/interior_design/hoechst_lobby/6.jpeg","/images/projects/interior_design/hoechst_lobby/7.jpeg","/images/projects/interior_design/hoechst_lobby/8.jpeg","/images/projects/interior_design/hoechst_lobby/9.jpeg","/images/projects/interior_design/hoechst_lobby/10.jpeg","/images/projects/interior_design/hoechst_lobby/11.jpeg","/images/projects/interior_design/hoechst_lobby/12.jpeg","/images/projects/interior_design/hoechst_lobby/13.jpeg","/images/projects/interior_design/hoechst_lobby/14.jpeg","/images/projects/interior_design/hoechst_lobby/15.jpeg","/images/projects/interior_design/hoechst_lobby/16.jpeg","/images/projects/interior_design/hoechst_lobby/17.jpeg","/images/projects/interior_design/hoechst_lobby/18.jpeg","/images/projects/interior_design/hoechst_lobby/19.jpeg","/images/projects/interior_design/hoechst_lobby/20.jpeg","/images/projects/interior_design/hoechst_lobby/21.jpeg","/images/projects/interior_design/hoechst_lobby/22.jpeg","/images/projects/interior_design/hoechst_lobby/23.jpeg","/images/projects/interior_design/hoechst_lobby/24.jpeg","/images/projects/interior_design/hoechst_lobby/25.jpeg","/images/projects/interior_design/hoechst_lobby/26.jpeg","/images/projects/interior_design/hoechst_lobby/27.jpeg","/images/projects/interior_design/hoechst_lobby/28.jpeg","/images/projects/interior_design/hoechst_lobby/29.jpeg",
+  ]},
+  { title: "Hoechst Board Room", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/hoechst_boardroom/1.jpeg","/images/projects/interior_design/hoechst_boardroom/2.jpeg","/images/projects/interior_design/hoechst_boardroom/3.jpeg","/images/projects/interior_design/hoechst_boardroom/4.jpeg","/images/projects/interior_design/hoechst_boardroom/5.jpeg","/images/projects/interior_design/hoechst_boardroom/6.jpeg","/images/projects/interior_design/hoechst_boardroom/7.jpeg","/images/projects/interior_design/hoechst_boardroom/8.jpeg","/images/projects/interior_design/hoechst_boardroom/9.jpeg","/images/projects/interior_design/hoechst_boardroom/10.jpeg","/images/projects/interior_design/hoechst_boardroom/11.jpeg","/images/projects/interior_design/hoechst_boardroom/12.jpeg","/images/projects/interior_design/hoechst_boardroom/13.jpeg","/images/projects/interior_design/hoechst_boardroom/14.jpeg","/images/projects/interior_design/hoechst_boardroom/15.jpeg","/images/projects/interior_design/hoechst_boardroom/16.jpeg","/images/projects/interior_design/hoechst_boardroom/17.jpeg","/images/projects/interior_design/hoechst_boardroom/18.jpeg","/images/projects/interior_design/hoechst_boardroom/19.jpeg","/images/projects/interior_design/hoechst_boardroom/20.jpeg","/images/projects/interior_design/hoechst_boardroom/21.jpeg","/images/projects/interior_design/hoechst_boardroom/22.jpeg","/images/projects/interior_design/hoechst_boardroom/23.jpeg","/images/projects/interior_design/hoechst_boardroom/24.jpeg","/images/projects/interior_design/hoechst_boardroom/25.jpeg","/images/projects/interior_design/hoechst_boardroom/26.jpeg","/images/projects/interior_design/hoechst_boardroom/27.jpeg","/images/projects/interior_design/hoechst_boardroom/28.jpeg",
+  ]},
+  { title: "Mr. Maaz Residence", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/maaz_residence/1.jpeg","/images/projects/interior_design/maaz_residence/2.jpeg","/images/projects/interior_design/maaz_residence/3.jpeg","/images/projects/interior_design/maaz_residence/4.jpeg","/images/projects/interior_design/maaz_residence/5.jpeg","/images/projects/interior_design/maaz_residence/6.jpeg","/images/projects/interior_design/maaz_residence/7.jpeg","/images/projects/interior_design/maaz_residence/8.jpeg","/images/projects/interior_design/maaz_residence/9.jpeg","/images/projects/interior_design/maaz_residence/10.jpeg","/images/projects/interior_design/maaz_residence/11.jpeg","/images/projects/interior_design/maaz_residence/12.jpeg","/images/projects/interior_design/maaz_residence/13.jpeg","/images/projects/interior_design/maaz_residence/14.jpeg","/images/projects/interior_design/maaz_residence/15.jpeg","/images/projects/interior_design/maaz_residence/16.jpeg","/images/projects/interior_design/maaz_residence/17.jpeg","/images/projects/interior_design/maaz_residence/18.jpeg","/images/projects/interior_design/maaz_residence/19.jpeg","/images/projects/interior_design/maaz_residence/20.jpeg","/images/projects/interior_design/maaz_residence/21.jpeg","/images/projects/interior_design/maaz_residence/22.jpeg","/images/projects/interior_design/maaz_residence/23.jpeg","/images/projects/interior_design/maaz_residence/24.jpeg","/images/projects/interior_design/maaz_residence/25.jpeg","/images/projects/interior_design/maaz_residence/26.jpeg","/images/projects/interior_design/maaz_residence/27.jpeg",
+  ]},
+  { title: "Zarsh Pvt. Ltd.", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/zarsh/1.jpeg","/images/projects/interior_design/zarsh/2.jpeg","/images/projects/interior_design/zarsh/3.jpeg","/images/projects/interior_design/zarsh/4.jpeg","/images/projects/interior_design/zarsh/5.jpeg","/images/projects/interior_design/zarsh/6.jpeg","/images/projects/interior_design/zarsh/7.jpeg","/images/projects/interior_design/zarsh/8.jpeg","/images/projects/interior_design/zarsh/9.jpeg","/images/projects/interior_design/zarsh/10.jpeg","/images/projects/interior_design/zarsh/11.jpeg","/images/projects/interior_design/zarsh/12.jpeg","/images/projects/interior_design/zarsh/13.jpeg","/images/projects/interior_design/zarsh/14.jpeg","/images/projects/interior_design/zarsh/15.jpeg","/images/projects/interior_design/zarsh/16.jpeg","/images/projects/interior_design/zarsh/17.jpeg","/images/projects/interior_design/zarsh/18.jpeg","/images/projects/interior_design/zarsh/19.jpeg","/images/projects/interior_design/zarsh/20.jpeg","/images/projects/interior_design/zarsh/21.jpeg","/images/projects/interior_design/zarsh/22.jpeg","/images/projects/interior_design/zarsh/23.jpeg","/images/projects/interior_design/zarsh/24.jpeg","/images/projects/interior_design/zarsh/25.jpeg","/images/projects/interior_design/zarsh/26.jpeg","/images/projects/interior_design/zarsh/27.jpeg",
+  ]},
+  { title: "Amreen Hirani Residence", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/amreen_hirani/1.jpeg","/images/projects/interior_design/amreen_hirani/2.jpeg","/images/projects/interior_design/amreen_hirani/3.jpeg","/images/projects/interior_design/amreen_hirani/4.jpeg","/images/projects/interior_design/amreen_hirani/5.jpeg","/images/projects/interior_design/amreen_hirani/6.jpeg","/images/projects/interior_design/amreen_hirani/7.jpeg","/images/projects/interior_design/amreen_hirani/8.jpeg","/images/projects/interior_design/amreen_hirani/9.jpeg","/images/projects/interior_design/amreen_hirani/10.jpeg","/images/projects/interior_design/amreen_hirani/11.jpeg","/images/projects/interior_design/amreen_hirani/12.jpeg","/images/projects/interior_design/amreen_hirani/13.jpeg","/images/projects/interior_design/amreen_hirani/14.jpeg","/images/projects/interior_design/amreen_hirani/15.jpeg","/images/projects/interior_design/amreen_hirani/16.jpeg","/images/projects/interior_design/amreen_hirani/17.jpeg","/images/projects/interior_design/amreen_hirani/18.jpeg","/images/projects/interior_design/amreen_hirani/19.jpeg","/images/projects/interior_design/amreen_hirani/20.jpeg","/images/projects/interior_design/amreen_hirani/21.jpeg","/images/projects/interior_design/amreen_hirani/22.jpeg",
+  ]},
+  { title: "Kitchen & Residential", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/kitchen_residential/1.jpeg","/images/projects/interior_design/kitchen_residential/2.jpeg","/images/projects/interior_design/kitchen_residential/3.jpeg","/images/projects/interior_design/kitchen_residential/4.jpeg","/images/projects/interior_design/kitchen_residential/5.jpeg","/images/projects/interior_design/kitchen_residential/6.jpg","/images/projects/interior_design/kitchen_residential/7.jpg","/images/projects/interior_design/kitchen_residential/8.jpg","/images/projects/interior_design/kitchen_residential/9.jpg","/images/projects/interior_design/kitchen_residential/10.jpg","/images/projects/interior_design/kitchen_residential/11.jpg","/images/projects/interior_design/kitchen_residential/12.jpg","/images/projects/interior_design/kitchen_residential/13.jpg","/images/projects/interior_design/kitchen_residential/14.jpg","/images/projects/interior_design/kitchen_residential/15.jpg","/images/projects/interior_design/kitchen_residential/16.jpg","/images/projects/interior_design/kitchen_residential/17.jpg","/images/projects/interior_design/kitchen_residential/18.jpg","/images/projects/interior_design/kitchen_residential/19.jpg","/images/projects/interior_design/kitchen_residential/20.jpg","/images/projects/interior_design/kitchen_residential/21.jpg","/images/projects/interior_design/kitchen_residential/22.jpg","/images/projects/interior_design/kitchen_residential/23.jpeg","/images/projects/interior_design/kitchen_residential/24.jpeg",
+  ]},
+  { title: "Furniture Designs", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/furniture_designs/1.jpeg","/images/projects/interior_design/furniture_designs/2.jpeg","/images/projects/interior_design/furniture_designs/3.jpeg","/images/projects/interior_design/furniture_designs/4.jpeg","/images/projects/interior_design/furniture_designs/5.jpeg","/images/projects/interior_design/furniture_designs/6.jpeg","/images/projects/interior_design/furniture_designs/7.jpeg","/images/projects/interior_design/furniture_designs/8.jpeg","/images/projects/interior_design/furniture_designs/9.jpeg","/images/projects/interior_design/furniture_designs/10.jpeg","/images/projects/interior_design/furniture_designs/11.jpeg","/images/projects/interior_design/furniture_designs/12.jpeg","/images/projects/interior_design/furniture_designs/13.jpeg","/images/projects/interior_design/furniture_designs/14.jpeg","/images/projects/interior_design/furniture_designs/15.jpeg","/images/projects/interior_design/furniture_designs/16.jpeg",
+  ]},
+  { title: "Eura Shipping", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/eura_shipping/1.jpeg","/images/projects/interior_design/eura_shipping/2.jpeg","/images/projects/interior_design/eura_shipping/3.jpeg","/images/projects/interior_design/eura_shipping/4.jpeg","/images/projects/interior_design/eura_shipping/5.jpeg","/images/projects/interior_design/eura_shipping/6.jpeg","/images/projects/interior_design/eura_shipping/7.jpeg","/images/projects/interior_design/eura_shipping/8.jpeg","/images/projects/interior_design/eura_shipping/9.jpeg","/images/projects/interior_design/eura_shipping/10.jpeg","/images/projects/interior_design/eura_shipping/11.jpeg","/images/projects/interior_design/eura_shipping/12.jpeg","/images/projects/interior_design/eura_shipping/13.jpeg",
+  ]},
+  { title: "SJA Salon & SPA", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/sja_salon/1.jpeg","/images/projects/interior_design/sja_salon/2.jpeg","/images/projects/interior_design/sja_salon/3.jpeg","/images/projects/interior_design/sja_salon/4.jpeg","/images/projects/interior_design/sja_salon/5.jpeg","/images/projects/interior_design/sja_salon/6.jpeg","/images/projects/interior_design/sja_salon/7.jpeg","/images/projects/interior_design/sja_salon/8.jpeg","/images/projects/interior_design/sja_salon/9.jpeg","/images/projects/interior_design/sja_salon/10.jpeg","/images/projects/interior_design/sja_salon/11.jpeg","/images/projects/interior_design/sja_salon/12.jpeg","/images/projects/interior_design/sja_salon/13.jpeg","/images/projects/interior_design/sja_salon/14.jpeg","/images/projects/interior_design/sja_salon/15.jpeg",
+  ]},
+  { title: "Hoechst Gym & Gaming Room", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/hoechst_gym/1.jpeg","/images/projects/interior_design/hoechst_gym/2.jpeg","/images/projects/interior_design/hoechst_gym/3.jpeg","/images/projects/interior_design/hoechst_gym/4.jpeg","/images/projects/interior_design/hoechst_gym/5.jpeg","/images/projects/interior_design/hoechst_gym/6.jpeg","/images/projects/interior_design/hoechst_gym/7.jpeg","/images/projects/interior_design/hoechst_gym/8.jpeg","/images/projects/interior_design/hoechst_gym/9.jpeg","/images/projects/interior_design/hoechst_gym/10.jpeg","/images/projects/interior_design/hoechst_gym/11.jpeg","/images/projects/interior_design/hoechst_gym/12.jpeg","/images/projects/interior_design/hoechst_gym/13.jpeg","/images/projects/interior_design/hoechst_gym/14.jpeg","/images/projects/interior_design/hoechst_gym/15.jpeg",
+  ]},
+  { title: "The Mins", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/the_mins/1.jpg","/images/projects/interior_design/the_mins/2.jpg","/images/projects/interior_design/the_mins/3.jpg","/images/projects/interior_design/the_mins/4.jpg","/images/projects/interior_design/the_mins/5.jpg","/images/projects/interior_design/the_mins/6.jpg","/images/projects/interior_design/the_mins/7.jpg","/images/projects/interior_design/the_mins/8.jpg","/images/projects/interior_design/the_mins/9.jpg","/images/projects/interior_design/the_mins/10.jpg","/images/projects/interior_design/the_mins/11.jpg","/images/projects/interior_design/the_mins/12.jpg",
+  ]},
+  { title: "AHM Securities", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/ahm_securities/1.jpg","/images/projects/interior_design/ahm_securities/2.jpg","/images/projects/interior_design/ahm_securities/3.jpg","/images/projects/interior_design/ahm_securities/4.jpg","/images/projects/interior_design/ahm_securities/5.jpg","/images/projects/interior_design/ahm_securities/6.jpg","/images/projects/interior_design/ahm_securities/7.jpg","/images/projects/interior_design/ahm_securities/8.jpg",
+  ]},
+  { title: "Dr. Saqib — The Dental Clinic", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/dr_saqib/1.jpeg","/images/projects/interior_design/dr_saqib/2.jpeg","/images/projects/interior_design/dr_saqib/3.jpeg","/images/projects/interior_design/dr_saqib/4.jpeg","/images/projects/interior_design/dr_saqib/5.jpeg","/images/projects/interior_design/dr_saqib/6.jpeg","/images/projects/interior_design/dr_saqib/7.jpeg",
+  ]},
+  { title: "MCB Arif Habib", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/mcb_arif_habib/1.jpg","/images/projects/interior_design/mcb_arif_habib/2.jpg","/images/projects/interior_design/mcb_arif_habib/3.jpg","/images/projects/interior_design/mcb_arif_habib/4.jpg","/images/projects/interior_design/mcb_arif_habib/5.jpg",
+  ]},
+  { title: "Tree House Cafe", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/tree_house_cafe/1.jpeg","/images/projects/interior_design/tree_house_cafe/2.jpeg","/images/projects/interior_design/tree_house_cafe/3.jpeg","/images/projects/interior_design/tree_house_cafe/4.jpeg","/images/projects/interior_design/tree_house_cafe/5.jpeg",
+  ]},
+  { title: "Liberty Power", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/liberty_power/1.jpg","/images/projects/interior_design/liberty_power/2.jpg","/images/projects/interior_design/liberty_power/3.jpg","/images/projects/interior_design/liberty_power/4.jpg",
+  ]},
+  { title: "Pharmacie Plus", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/pharmacie_plus/1.jpg","/images/projects/interior_design/pharmacie_plus/2.jpg","/images/projects/interior_design/pharmacie_plus/3.jpg","/images/projects/interior_design/pharmacie_plus/4.jpg",
+  ]},
+  { title: "Hoechst Reception", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/hoechst_reception/1.jpeg","/images/projects/interior_design/hoechst_reception/2.jpeg","/images/projects/interior_design/hoechst_reception/3.jpeg","/images/projects/interior_design/hoechst_reception/4.jpeg",
+  ]},
+  { title: "Icecreamo", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/icecreamo/1.jpg","/images/projects/interior_design/icecreamo/2.jpg","/images/projects/interior_design/icecreamo/3.jpg","/images/projects/interior_design/icecreamo/4.jpg",
+  ]},
+  { title: "Qatar Airways", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/qatar_airways/1.jpg","/images/projects/interior_design/qatar_airways/2.jpg","/images/projects/interior_design/qatar_airways/3.jpg",
+  ]},
+  { title: "Cotton & Silk", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/cotton_silk/1.jpg","/images/projects/interior_design/cotton_silk/2.jpg","/images/projects/interior_design/cotton_silk/3.jpg",
+  ]},
+  { title: "Mr. Mithani — Daughter's Room", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/mithani_room/1.jpeg","/images/projects/interior_design/mithani_room/2.jpeg",
+  ]},
+  { title: "AE Mohammadi", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/ae_mohammadi/1.jpeg",
+  ]},
+  { title: "LA Kid", year: "", category: "Interior Design & Architecture", images: [
+    "/images/projects/interior_design/la_kid/1.jpg",
+  ]},
+
   // ─── FURNITURE ──────────────────────────────────────────────────────────────
   { title: "Office Furniture", year: "2024", category: "Furniture", images: [
     "/images/projects/furniture/office/1.jpg",
@@ -247,7 +327,7 @@ const allProjects = [
   ]},
 ];
 
-const folders = ["Corporate Offices", "Retail Outlets & Kiosks", "Residential Projects", "Furniture"];
+const folders = ["Corporate Offices", "Retail Outlets & Kiosks", "Residential Projects", "Furniture", "Interior Design & Architecture"];
 
 type Project = (typeof allProjects)[number];
 
