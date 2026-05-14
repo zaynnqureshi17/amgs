@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   FaFacebookF,
-  FaLinkedinIn,
   FaInstagram,
   FaWhatsapp,
   FaEnvelope,
@@ -57,9 +56,8 @@ export default function Header({ transparent = false }: { transparent?: boolean 
             </a>
           </div>
           <div className="flex items-center gap-3.5">
-            {[FaFacebookF, FaLinkedinIn, FaInstagram].map((Icon, i) => (
-              <a key={i} href="#" className="hover:opacity-80 transition-opacity" aria-label="social"><Icon /></a>
-            ))}
+            <a href="https://www.facebook.com/share/1JTZMjDaEW/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" aria-label="Facebook"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/amgysinteriors?igsh=MXQ5NjByemR6NG9naQ==" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" aria-label="Instagram"><FaInstagram /></a>
           </div>
         </div>
       </div>
