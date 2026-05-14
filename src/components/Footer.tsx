@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 
 const navLinks = ["Home", "Portfolio", "Our Story", "About", "Faqs"];
 const navHrefs = ["/", "/projects", "/our-story", "/about", "/faqs"];
@@ -24,6 +24,28 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Contact details */}
+      <div className="border-t border-gray-200 bg-white">
+        <div className="max-w-5xl mx-auto px-6 sm:px-10 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-center gap-4 sm:gap-10">
+          <a
+            href="https://maps.google.com/maps/search/Amgys%20Interiors/@24.86718769,67.08061205,17z?hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-start gap-2 text-[12px] text-[#4c505b] hover:text-[#E84520] transition-colors max-w-xs"
+          >
+            <FaMapMarkerAlt className="mt-0.5 flex-shrink-0 text-[#E84520]" />
+            <span>Office No. 110, 1st Floor, Anum Blessing, Block 7/8, K.C.H.S.U., Near Old Duty Free Shop, Main Shahrah-e-Faisal, Karachi</span>
+          </a>
+          <a
+            href="tel:+922134549977"
+            className="flex items-center gap-2 text-[12px] text-[#4c505b] hover:text-[#E84520] transition-colors flex-shrink-0"
+          >
+            <FaPhone className="flex-shrink-0 text-[#E84520]" />
+            <span>+92-21-34549977</span>
+          </a>
+        </div>
+      </div>
+
       {/* Nav + Social */}
       <div className="border-t border-gray-200">
         <div className="max-w-5xl mx-auto px-6 sm:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -33,11 +55,12 @@ export default function Footer() {
             ))}
           </div>
           <div className="flex items-center gap-3">
-            {[FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube].map((Icon, i) => (
-              <a key={i} href="#" className="w-8 h-8 rounded border border-gray-300 flex items-center justify-center text-[#4c505b] hover:text-[#E84520] hover:border-[#E84520] transition-colors text-xs" aria-label="social">
-                <Icon />
-              </a>
-            ))}
+            <a href="https://www.facebook.com/share/1JTZMjDaEW/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded border border-gray-300 flex items-center justify-center text-[#4c505b] hover:text-[#E84520] hover:border-[#E84520] transition-colors text-xs" aria-label="Facebook">
+              <FaFacebookF />
+            </a>
+            <a href="https://www.instagram.com/amgysinteriors?igsh=MXQ5NjByemR6NG9naQ==" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded border border-gray-300 flex items-center justify-center text-[#4c505b] hover:text-[#E84520] hover:border-[#E84520] transition-colors text-xs" aria-label="Instagram">
+              <FaInstagram />
+            </a>
           </div>
         </div>
       </div>
