@@ -2,19 +2,19 @@
 
 const timeline = [
   {
-    date: "1979",
+    date: "1971",
     title: "1st Generation — Muhammad Yusuf Minhas (Late)",
     desc: "AMGYS founded by Muhammad Yusuf Minhas as a wood working and interior contracting firm in Karachi.",
     side: "left",
   },
   {
-    date: "1980s",
+    date: "1972",
     title: "Early Growth",
     desc: "Established reputation working under top interior design consultants and architects across Pakistan.",
     side: "right",
   },
   {
-    date: "1990",
+    date: "1979",
     title: "2nd Generation — Sohail Yusuf Minhas",
     desc: "Sohail Yusuf Minhas took the helm, expanding into corporate office interiors and turnkey projects for multinational companies.",
     side: "left",
