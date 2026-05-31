@@ -425,6 +425,8 @@ function ProjectCard({ p, i, onOpen }: { p: Project; i: number; onOpen: (p: Proj
       <img
         src={p.images[0]}
         alt={p.title}
+        loading={i < 6 ? "eager" : "lazy"}
+        decoding="async"
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent" />

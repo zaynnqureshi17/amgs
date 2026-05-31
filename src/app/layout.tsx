@@ -35,6 +35,14 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${playfair.variable} h-full antialiased`}
     >
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/projects/corporate/ubl_nn/1.jpeg"
+          fetchPriority="high"
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
