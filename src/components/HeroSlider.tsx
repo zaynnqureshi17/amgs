@@ -1,11 +1,14 @@
 "use client";
 
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+import { Pagination, Autoplay, EffectFade } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const slides = [
   {
-    image: "/images/projects/corporate/ubl_nn/1.jpg",
+    image: "/images/projects/corporate/ubl_it/1.jpeg",
     title: "Interior Excellence",
     subtitle: "50+ Years of Crafting Premium Spaces",
   },
@@ -27,12 +30,14 @@ const slides = [
 ];
 
 export default function HeroSlider() {
+  const swiperRef = useRef<SwiperType | null>(null);
+
   return (
     <section className="relative h-screen w-full">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay, EffectFade]}
+        modules={[Pagination, Autoplay, EffectFade]}
         effect="fade"
-        navigation
+        onSwiper={(s) => (swiperRef.current = s)}
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop
@@ -42,9 +47,13 @@ export default function HeroSlider() {
         {slides.map((slide, i) => (
           <SwiperSlide key={i}>
             <div className="relative h-screen w-full overflow-hidden">
-              <div
-                className="ken-burns absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${slide.image})` }}
+              <img
+                src={slide.image}
+                alt={slide.title}
+                fetchPriority={i === 0 ? "high" : "auto"}
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding="async"
+                className="ken-burns absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/50" />
 
@@ -70,6 +79,22 @@ export default function HeroSlider() {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Custom navigation arrows */}
+      <button
+        onClick={() => swiperRef.current?.slidePrev()}
+        aria-label="Previous slide"
+        className="hidden md:flex absolute left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 items-center justify-center rounded-full text-white border border-white/40 bg-black/20 backdrop-blur-sm hover:bg-[#E84520] hover:border-[#E84520] transition-all duration-300"
+      >
+        <FaChevronLeft className="text-sm" />
+      </button>
+      <button
+        onClick={() => swiperRef.current?.slideNext()}
+        aria-label="Next slide"
+        className="hidden md:flex absolute right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 items-center justify-center rounded-full text-white border border-white/40 bg-black/20 backdrop-blur-sm hover:bg-[#E84520] hover:border-[#E84520] transition-all duration-300"
+      >
+        <FaChevronRight className="text-sm" />
+      </button>
     </section>
   );
 }

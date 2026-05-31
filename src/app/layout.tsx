@@ -39,7 +39,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/images/projects/corporate/ubl_nn/1.jpeg"
+          href="/images/projects/corporate/ubl_it/1.jpeg"
           fetchPriority="high"
         />
       </head>
