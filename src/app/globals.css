@@ -16,13 +16,21 @@
   --font-serif: var(--font-playfair);
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
 
 body {
   font-family: var(--font-poppins), system-ui, sans-serif;
   color: #080708;
   background: #fff;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 /* ===== KEN BURNS ===== */
